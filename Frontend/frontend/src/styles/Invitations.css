@@ -1,0 +1,225 @@
+/* Invitations.css - High Contrast White & Blue Theme */
+
+.invitationsContainer {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.invitationsContainer h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  background: #2563eb;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.invitationsEmpty {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #f1f5f9;
+  border-radius: 1rem;
+  border: 2px dashed #94a3b8;
+}
+
+.invitationsEmpty p {
+  color: #475569;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.invitationsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.invitationsCard {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.invitationsCard:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.invitationsTitle {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.invitationsTitle a {
+  color: #1e40af;
+  text-decoration: none;
+}
+
+.invitationsTitle a:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.invitationsInfo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  color: #334155;
+  background: #f1f5f9;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.invitationsInfo p {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.invitationsInfo strong {
+  color: #0f172a;
+}
+
+.invitationsStatus {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.status-pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-accepted {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.status-rejected {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.invitationsButtons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.invitationsAcceptButton {
+  padding: 0.5rem 1.25rem;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.invitationsAcceptButton:hover:not(:disabled) {
+  background: #059669;
+  transform: translateY(-1px);
+}
+
+.invitationsAcceptButton:disabled {
+  background: #a5d6a7;
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none;
+}
+
+.invitationsRejectButton {
+  padding: 0.5rem 1.25rem;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.invitationsRejectButton:hover:not(:disabled) {
+  background: #dc2626;
+  transform: translateY(-1px);
+}
+
+.invitationsRejectButton:disabled {
+  background: #fca5a5;
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none;
+}
+
+.invitationsBackLink {
+  margin-bottom: 1.5rem;
+}
+
+.invitationsBackLink a {
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 0.875rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.invitationsBackLink a:hover {
+  text-decoration: underline;
+  gap: 0.5rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: #2563eb;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .invitationsContainer {
+    padding: 0 1rem;
+    margin: 1rem auto;
+  }
+
+  .invitationsContainer h1 {
+    font-size: 1.5rem;
+  }
+
+  .invitationsCard {
+    padding: 1rem;
+  }
+
+  .invitationsInfo {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .invitationsButtons {
+    flex-direction: column;
+  }
+
+  .invitationsAcceptButton,
+  .invitationsRejectButton {
+    width: 100%;
+    text-align: center;
+  }
+}

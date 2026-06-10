@@ -1,0 +1,568 @@
+/* AdminDashboard.css - High Contrast White & Blue Theme */
+
+.adminDashboardContainer {
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Header */
+.adminHeader {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.adminHeader h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+/* Tabs */
+.adminTabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+}
+
+.adminTabButton {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: transparent;
+  color: #64748b;
+}
+
+.adminTabButton:hover {
+  background: #f1f5f9;
+  color: #2563eb;
+}
+
+.adminTabActive {
+  background: #2563eb;
+  color: white;
+}
+
+.adminTabActive:hover {
+  background: #1d4ed8;
+  color: white;
+}
+
+.adminTabInactive {
+  background: transparent;
+  color: #64748b;
+}
+
+/* Stats Grid */
+.adminStatsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.adminStatCard {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.adminStatCard:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.adminStatCard h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #64748b;
+  margin: 0 0 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.adminStatNumber {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0.5rem 0;
+}
+
+.adminStatLabels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #e2e8f0;
+  font-size: 0.75rem;
+  color: #475569;
+}
+
+.adminStatCardBlue {
+  border-top: 3px solid #3b82f6;
+}
+
+.adminStatCardGreen {
+  border-top: 3px solid #10b981;
+}
+
+.adminStatCardOrange {
+  border-top: 3px solid #f59e0b;
+}
+
+.adminStatCardPink {
+  border-top: 3px solid #ec4899;
+}
+
+/* Recent Section */
+.adminRecentSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.adminRecentSection h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.adminRecentItem {
+  background: #f8fafc;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  transition: all 0.2s;
+}
+
+.adminRecentItem:hover {
+  background: #f1f5f9;
+}
+
+.adminRecentLink {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.adminRecentLink:hover {
+  text-decoration: underline;
+}
+
+.adminRecentRole {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.125rem 0.5rem;
+  background: #e2e8f0;
+  border-radius: 1rem;
+  font-size: 0.7rem;
+  color: #475569;
+}
+
+.adminRecentStatus {
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-size: 0.7rem;
+  color: #10b981;
+}
+
+.adminRecentMeta {
+  font-size: 0.7rem;
+  color: #64748b;
+  margin: 0.25rem 0 0 0;
+}
+
+.adminViewAllLink {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.adminViewAllLink:hover {
+  text-decoration: underline;
+}
+
+/* Filter Section */
+.adminFilterSection {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+}
+
+.adminSearchInput {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.adminSearchInput:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.adminRoleSelect {
+  padding: 0.75rem 2rem 0.75rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 0.5rem;
+  background: white;
+  font-size: 0.875rem;
+  color: #1e293b;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%233b82f6' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1.25rem;
+  appearance: none;
+}
+
+.adminRoleSelect:hover {
+  border-color: #3b82f6;
+}
+
+/* Table */
+.adminTableWrapper {
+  overflow-x: auto;
+  border-radius: 1rem;
+  border: 1px solid #e2e8f0;
+  background: white;
+}
+
+.adminTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.adminTableHeader {
+  background: #f8fafc;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.adminTableHeader th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.adminTableRow {
+  border-bottom: 1px solid #e2e8f0;
+  transition: background 0.2s;
+}
+
+.adminTableRow:hover {
+  background: #f8fafc;
+}
+
+.adminTableCell {
+  padding: 0.875rem 1rem;
+  color: #334155;
+}
+
+.adminTableCell a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.adminTableCell a:hover {
+  text-decoration: underline;
+}
+
+/* Status Badges */
+.adminStatusApproved {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: #d1fae5;
+  color: #065f46;
+  border-radius: 2rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.adminStatusPending {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: #fed7aa;
+  color: #9a3412;
+  border-radius: 2rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.adminStatusUnverified {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: #fef3c7;
+  color: #92400e;
+  border-radius: 2rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.adminStatusActive {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: #d1fae5;
+  color: #065f46;
+  border-radius: 2rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.adminStatusInactive {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: #fee2e2;
+  color: #b91c1c;
+  border-radius: 2rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+/* Buttons */
+.adminApproveButton {
+  background: #10b981;
+  border: none;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-right: 0.5rem;
+}
+
+.adminApproveButton:hover:not(:disabled) {
+  background: #059669;
+  transform: translateY(-1px);
+}
+
+.adminApproveButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.adminDeleteButton {
+  background: #ef4444;
+  border: none;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.adminDeleteButton:hover:not(:disabled) {
+  background: #dc2626;
+  transform: translateY(-1px);
+}
+
+.adminDeleteButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Pending Reviewers Cards */
+.adminEmptyMessage {
+  text-align: center;
+  padding: 3rem;
+  background: #f1f5f9;
+  border-radius: 1rem;
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+.adminEmptyPendingMessage {
+  text-align: center;
+  padding: 3rem;
+  background: #dbeafe;
+  border-radius: 1rem;
+  color: #1e40af;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.adminPendingCard {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.2s;
+}
+
+.adminPendingCard:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.adminPendingContent {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.adminPendingName {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0 0 0.5rem 0;
+}
+
+.adminPendingContent p {
+  margin: 0.25rem 0;
+  font-size: 0.8rem;
+  color: #475569;
+}
+
+.adminPendingContent strong {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.adminApproveReviewerButton {
+  background: #10b981;
+  border: none;
+  padding: 0.6rem 1.25rem;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.adminApproveReviewerButton:hover:not(:disabled) {
+  background: #059669;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+
+.adminApproveReviewerButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Loading State */
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: #2563eb;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .adminStatsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .adminDashboardContainer {
+    padding: 0 1rem;
+    margin: 1rem auto;
+  }
+
+  .adminHeader h1 {
+    font-size: 1.5rem;
+  }
+
+  .adminTabs {
+    gap: 0.25rem;
+  }
+
+  .adminTabButton {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  .adminStatsGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .adminRecentSection {
+    grid-template-columns: 1fr;
+  }
+
+  .adminFilterSection {
+    flex-direction: column;
+  }
+
+  .adminSearchInput,
+  .adminRoleSelect {
+    width: 100%;
+  }
+
+  .adminPendingContent {
+    flex-direction: column;
+  }
+
+  .adminApproveReviewerButton {
+    width: 100%;
+    text-align: center;
+  }
+
+  .adminTable {
+    font-size: 0.75rem;
+  }
+
+  .adminTableCell {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .adminStatsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .adminStatNumber {
+    font-size: 1.75rem;
+  }
+}

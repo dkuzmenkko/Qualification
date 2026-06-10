@@ -1,0 +1,72 @@
+.exportsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.exportsError {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.exportsEmptyState {
+  text-align: center;
+  padding: 40px;
+}
+
+.exportsConferenceCard {
+  margin-bottom: 30px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.exportsButtons {
+  margin-top: 10px;
+}
+
+.exportsButton {
+  margin-right: 10px;
+  padding: 8px 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+.exportsButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.exportsParticipantsButton {
+  background-color: #2196f3;
+  color: white;
+}
+
+.exportsSubmissionsButton {
+  background-color: #4caf50;
+  color: white;
+}
+
+.exportsHistorySection {
+  margin-top: 40px;
+}
+
+.exportsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.exportsTable th {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.exportsTable td {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}

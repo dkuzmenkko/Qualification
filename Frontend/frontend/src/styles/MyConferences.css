@@ -1,0 +1,353 @@
+/* MyConferences.css - Modern High Contrast White & Blue Theme */
+
+.myConferencesContainer {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+/* Header Section */
+.myConferencesHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.myConferencesHeader h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  background: #2563eb;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.myConferencesCreateButton {
+  background:  #2563eb ;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* .myConferencesCreateButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+}
+ */
+/* Empty State */
+.myConferencesEmpty {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #f1f5f9;
+  border-radius: 1rem;
+  border: 2px dashed #94a3b8;
+}
+
+.myConferencesEmpty p {
+  color: #475569;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.myConferencesFirstButton {
+  background: #2563eb;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+/* .myConferencesFirstButton:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+} */
+
+/* Sections */
+.myConferencesSection {
+  margin-bottom: 2.5rem;
+}
+
+.myConferencesSection h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #3b82f6;
+}
+
+/* Cards List */
+.myConferencesList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Card Common Styles */
+.myConferencesCard {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.myConferencesCard:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+
+.myConferencesCardHeader {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.myConferencesCardInfo {
+  flex: 1;
+}
+
+.myConferencesCardTitle {
+  margin: 0 0 1rem 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.myConferencesCardTitle a {
+  color: #1e40af;
+  text-decoration: none;
+}
+
+
+
+.myConferencesCardInfo p {
+  margin: 0.5rem 0;
+  font-size: 0.875rem;
+  color: #334155;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.myConferencesCardInfo p strong {
+  color: #475569;
+  font-weight: 700;
+  min-width: 120px;
+}
+
+/* Badges */
+.myConferencesActiveBadge {
+  background: #d1fae5;
+  color: #065f46;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid #10b981;
+}
+
+.myConferencesPastBadge {
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid #ef4444;
+}
+
+/* Card Actions */
+.myConferencesCardActions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.myConferencesViewButton {
+  background: #f1f5f9;
+  border: 2px solid #cbd5e1;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: #334155;
+  cursor: pointer;
+}
+
+.myConferencesDeleteButton {
+  background: #fee2e2;
+  border: 2px solid #ef4444;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: #dc2626;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.myConferencesDeleteButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Export Buttons Section */
+.myConferencesExportButtons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 2px solid #e2e8f0;
+}
+
+.myConferencesExportButton {
+  background: #f8fafc;
+  border: 2px solid #cbd5e1;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: #1e40af;
+  cursor: pointer;
+}
+
+.myConferencesExportButton:hover:not(:disabled) {
+  background: #dbeafe;
+  border-color: #3b82f6;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
+}
+
+.myConferencesExportButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.myConferencesSubmissionsButton {
+  background: #2563eb;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.myConferencesSubmissionsButton:hover {
+  background: #1d4ed8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .myConferencesContainer {
+    padding: 0 1rem;
+    margin: 1rem auto;
+  }
+
+  .myConferencesHeader {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .myConferencesHeader h1 {
+    font-size: 1.75rem;
+  }
+
+  .myConferencesCard {
+    padding: 1rem;
+  }
+
+  .myConferencesCardHeader {
+    flex-direction: column;
+  }
+
+  .myConferencesCardActions {
+    justify-content: flex-start;
+  }
+
+  .myConferencesCardInfo p strong {
+    min-width: auto;
+  }
+
+  .myConferencesCardInfo p {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .myConferencesExportButtons {
+    flex-direction: column;
+  }
+
+  .myConferencesExportButton,
+  .myConferencesSubmissionsButton {
+    width: 100%;
+    text-align: center;
+  }
+
+  .myConferencesCardTitle {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Loading State */
+.myConferencesContainer > div:first-of-type:not(.myConferencesHeader) {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1rem;
+  color: #2563eb;
+  font-weight: 500;
+}
+
+
+/* Focus States */
+*:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Additional improvements for better contrast */
+.myConferencesCardInfo p {
+  background: #f8fafc;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+}
+
+.myConferencesCardInfo p:nth-child(even) {
+  background: #f1f5f9;
+}
+
+/* Status indicators */
+.myConferencesCardActive::before {
+  display: none;
+}
+
+.myConferencesCardPast::before {
+  display: none;
+}

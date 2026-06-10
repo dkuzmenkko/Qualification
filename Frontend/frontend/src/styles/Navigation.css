@@ -1,0 +1,420 @@
+/* Загальні стилі для навігації */
+.navuser, .navadmin {
+  width: 100%;
+  padding: 15px 30px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #ddd; 
+}
+
+/* Лінки */
+.navlink {
+  text-decoration: none;
+  color: #333;
+  margin-right: 15px;
+  transition: color 0.2s;
+}
+
+.navlink:hover {
+  color: #002f61; 
+}
+
+.navlinkwhite {
+  color: #fff;
+}
+
+.navlink.greenbold {
+  color: #005013;
+  font-weight: bold;
+}
+
+.navlink.blue {
+  color: #003079;
+}
+
+.navlink.bluebold {
+  color: #003079;
+  font-weight: bold;
+}
+
+/* Кнопка "Подати тезу" - стилізована як звичайне посилання */
+.submit-button-nav {
+  background: none;
+  border: none;
+  color: #333;
+  margin-right: 15px;
+  padding: 0;
+  font-size: 16px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+
+.submit-button-nav:hover {
+  color: #002f61;
+}
+
+/* Кнопки */
+.btn {
+  padding: 7px 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s;
+  font-family: 'HeroFont', sans-serif;
+}
+
+.btn.danger {
+  background-color: #ffffff;
+  color: #470000;
+}
+
+/* Флекс контейнери */
+.flexstart {
+  display: flex;
+  align-items: center;
+}
+
+.gap20 {
+  gap: 20px;
+}
+
+.gap10 {
+  gap: 10px;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+/* Аватар */
+.avatarcontainer {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* Спінер при завантаженні аватара */
+.avatarplaceholder {
+  width: 100%;
+  height: 100%;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ccc;
+  border-top: 2px solid #007BFF;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Текст */
+.textwhite {
+  color: #fff;
+}
+
+.textmuted {
+  color: #555;
+  font-size: 14px;
+}
+
+.bold18 {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Стилі для адмін навігації */
+.navadmin {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.profile-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.profile-dropdown .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.dropdown-menu .btn.danger {
+  padding: 5px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  background-color: #470000;
+  color: #fff;
+  width: 100%;
+}
+
+.dropdown-menu .textmuted {
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+}
+
+.avatar-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 11px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.notif-badge {
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 11px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.dropdown-unread-count {
+  font-size: 12px;
+  font-weight: normal;
+  color: #f44336;
+  margin-left: 10px;
+}
+
+/* Стилі для випадаючого меню сповіщень */
+.dropdown-menu.notifications-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 360px;
+  max-height: 450px;
+  overflow-y: auto;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  z-index: 1000;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dropdown-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.btn.small {
+  padding: 5px 12px;
+  font-size: 13px;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dropdown-title {
+  font-weight: bold;
+  font-size: 16px;
+  border-bottom: 2px solid #003a77;
+  padding-bottom: 5px;
+}
+
+.dropdown-actions-column {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.dropdown-actions-column .btn.fullwidth {
+  flex: 1;
+  font-size: 14px;
+  padding: 6px 0;
+  background-color: #ffffff;
+  border-radius: 8px;
+  color: #004691;
+}
+
+.notificationsList .notificationsCard {
+  padding: 12px 10px;
+  background-color: #f9faff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.notificationsCard.unread {
+  border-left: 4px solid #25007c; 
+}
+
+.notificationsCard.read {
+  border-left: 4px solid transparent;
+}
+
+.notificationsCardTitle {
+  font-weight: bold;
+  border-bottom: 1px solid #000b18;
+  padding-bottom: 3px;
+  margin-bottom: 5px;
+}
+
+.notificationsCardMessage {
+  font-size: 14px;
+  color: #333;
+}
+
+.notificationsCardDate {
+  font-size: 12px;
+  color: #555;
+}
+
+.card-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.btn.mark-all {
+  background-color: transparent;
+  color: #004691;
+  border: none;
+  font-size: 14px;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: color 0.2s;
+}
+
+.btn.mark-all:hover {
+  color: #002f61;
+}
+
+.btn.delete-all {
+  background-color: transparent;
+  color: #d9534f;
+  border: none;
+  font-size: 14px;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: color 0.2s;
+}
+
+.btn.delete-all:hover {
+  color: #b02a37;
+}
+
+.btn.logout {
+  background-color: #d42323;
+  color: #fff;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.btn.logout:hover {
+  background-color: #7c0000;
+}
+
+/* Адаптація для мобільних пристроїв */
+@media (max-width: 768px) {
+  .navuser, .navadmin {
+    padding: 10px 15px;
+  }
+  
+  .navlink, .submit-button-nav {
+    margin-right: 10px;
+    font-size: 14px;
+  }
+  
+  .gap20 {
+    gap: 10px;
+  }
+  
+  .dropdown-menu.notifications-dropdown {
+    width: 300px;
+    right: -50px;
+  }
+}

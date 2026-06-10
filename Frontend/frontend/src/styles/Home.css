@@ -1,0 +1,685 @@
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.heroSection {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+  border-radius: 1.5rem;
+  padding: 3rem 2rem;
+  margin: 2rem 0 2rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  position: relative;
+  z-index: 1;
+}
+
+.heroSubtitle {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.heroSection .btn {
+  padding: 0.75rem 1.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 2rem;
+  cursor: pointer;
+  border: none;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.heroSection .btnPrimary {
+  background: white;
+  color: #1e3a8a;
+}
+
+.heroSection .btnPrimary:hover {
+  background: #f1f5f9;
+}
+
+.heroSection .btnSuccess {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.heroSection .btnSuccess:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.filterBar {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  background: #f8fafc;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border: 1px solid #cbd5e1;
+}
+
+.filterBar .formInput {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid #cbd5e1;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  background: white;
+  transition: all 0.2s;
+  outline: none;
+}
+
+.filterBar .formInput:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.filterBar .formSelect {
+  padding: 0.75rem 2rem 0.75rem 1rem;
+  border: 2px solid #cbd5e1;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  background: white;
+  cursor: pointer;
+  outline: none;
+  color: #1e3a8a;
+  font-weight: 500;
+ background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1.25rem;
+  appearance: none;
+}
+
+.filterBar .formSelect:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.filterBar .formSelect:hover {
+  border-color: #2563eb;
+  background: #f0f9ff;
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.conferencesList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.conferenceCard {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+.conferenceCard:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.conferenceCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.conferenceCardTitle {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.conferenceCardTitle a {
+  color: #1e40af;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.conferenceCardTitle a:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.conferenceStatusBadge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.statusActive {
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #10b981;
+}
+
+.statusPast {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #ef4444;
+}
+
+.conferenceTypeBadge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-block;
+  background: #dbeafe;
+  color: #1e40af;
+  border: 1px solid #3b82f6;
+}
+
+.conferenceCardInfo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  background: #f8fafc;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.infoRow {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  flex-wrap: wrap;
+}
+
+.infoLabel {
+  font-weight: 700;
+  color: #475569;
+  min-width: 100px;
+}
+
+.infoValue {
+  color: #1e293b;
+  font-weight: 500;
+}
+
+.conferenceCategory {
+  background: #e6f0ff;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.375rem;
+  display: inline-block;
+}
+
+.conferenceCardDescription {
+  color: #334155;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin: 1rem 0;
+  background: #fafcff;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border-left: 3px solid #3b82f6;
+}
+
+.conferenceCardFooter {
+  margin-top: 1rem;
+  text-align: right;
+}
+
+.conferenceDetailLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: none;
+  background: #2563eb;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+}
+
+.conferenceDetailLink:hover {
+  gap: 0.75rem;
+  background: #1d4ed8;
+}
+
+.conferenceCardSmall {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  transition: all 0.2s ease;
+}
+
+.conferenceCardSmall:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.conferenceCardSmall .conferenceCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.conferenceCardSmall h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.conferenceCardSmall h4 a {
+  color: #1e40af;
+  text-decoration: none;
+}
+
+.conferenceCardSmall h4 a:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.conferenceTypeBadgeSmall {
+  padding: 0.125rem 0.5rem;
+  border-radius: 2rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  background: #dbeafe;
+  color: #1e40af;
+  border: 1px solid #3b82f6;
+}
+
+.conferenceCardSmall .infoRow {
+  font-size: 0.75rem;
+}
+
+.conferenceCardSmall .infoLabel {
+  min-width: 70px;
+}
+
+.popularConferencesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.submissionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.submissionCard {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.submissionCard:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.submissionCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.submissionCardTitle {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.submissionCardTitle a {
+  color: #1e40af;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.submissionCardTitle a:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.submissionStatusBadge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.statusDraft {
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #94a3b8;
+}
+
+.statusPending {
+  background: #fef3c7;
+  color: #78350f;
+  border: 1px solid #f59e0b;
+}
+
+.statusRevisionRequired {
+  background: #fed7aa;
+  color: #7c2d12;
+  border: 1px solid #f97316;
+}
+
+.statusAccepted {
+  background: #d1fae5;
+  color: #064e3b;
+  border: 1px solid #10b981;
+}
+
+.statusRejected {
+  background: #fee2e2;
+  color: #7f1d1d;
+  border: 1px solid #ef4444;
+}
+
+.submissionCardInfo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  background: #f8fafc;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.submissionCardStats {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.statItem {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.statIcon {
+  font-size: 0.875rem;
+}
+
+.submissionCardAbstract {
+  color: #334155;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin: 1rem 0;
+  background: #fafcff;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border-left: 3px solid #059669;
+}
+
+.submissionCardFooter {
+  margin-top: 1rem;
+  text-align: right;
+}
+
+.submissionDetailLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: none;
+  background: #059669;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+}
+
+.submissionDetailLink:hover {
+  gap: 0.75rem;
+  background: #047857;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #f1f5f9;
+  border-radius: 1rem;
+  border: 2px dashed #94a3b8;
+}
+
+.emptyState p {
+  color: #475569;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1rem;
+  color: #2563eb;
+  font-weight: 500;
+  background: #f8fafc;
+  border-radius: 1rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.btnPrimary {
+  background: #2563eb;
+  color: white;
+}
+
+.btnPrimary:hover {
+  background: #1d4ed8;
+}
+
+.btnSuccess {
+  background: #059669;
+  color: white;
+}
+
+.btnSuccess:hover {
+  background: #047857;
+}
+
+.btnSecondary {
+  background: #f1f5f9;
+  color: #1e293b;
+  border: 1px solid #e2e8f0;
+}
+
+.btnSecondary:hover {
+  background: #e2e8f0;
+}
+
+.btnLarge {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+}
+
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gap15 {
+  gap: 0.9375rem;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.mt20 {
+  margin-top: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .heroSection {
+    padding: 2rem 1.5rem;
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  .heroTitle {
+    font-size: 1.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 0.875rem;
+  }
+
+  .filterBar {
+    flex-direction: column;
+  }
+
+  .filterBar .formSelect {
+    width: 100%;
+  }
+
+  .sectionTitle {
+    font-size: 1.25rem;
+  }
+
+  .conferenceCard,
+  .submissionCard {
+    padding: 1rem;
+  }
+
+  .conferenceCardInfo,
+  .submissionCardInfo {
+    grid-template-columns: 1fr;
+  }
+
+  .conferenceCardHeader,
+  .submissionCardHeader {
+    flex-direction: column;
+  }
+
+  .infoRow {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .infoLabel {
+    min-width: auto;
+  }
+
+  .conferenceCardFooter,
+  .submissionCardFooter {
+    text-align: left;
+  }
+
+  .popularConferencesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSection .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .flexCenter.gap15 {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .conferenceCardInfo,
+  .submissionCardInfo {
+    grid-template-columns: 1fr;
+  }
+
+  .submissionCardStats {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

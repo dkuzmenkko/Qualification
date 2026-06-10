@@ -1,0 +1,861 @@
+/* Discussions.css - High Contrast White & Blue Theme */
+
+.discussionsContainer {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.discussionsContainer h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.discussionsDescription {
+  color: #334155;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+/* Filter Section - з контрастним фоном */
+.discussionsFilters {
+  background: #f8fafc;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #cbd5e1;
+}
+
+.discussionsFilterRow {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.discussionsSearchInput {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.75rem 1rem;
+  border: 2px solid #cbd5e1;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  outline: none;
+  background: white;
+}
+
+.discussionsSearchInput:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.discussionsFilterSelect {
+  padding: 0.75rem 2rem 0.75rem 1rem;
+  border: 2px solid #cbd5e1;
+  border-radius: 0.75rem;
+  background: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1e3a8a;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%233b82f6' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1.25rem;
+  appearance: none;
+}
+
+.discussionsFilterSelect:hover {
+  border-color: #2563eb;
+  background: #f0f9ff;
+}
+
+/* Cards - з чіткими межами */
+.discussionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+
+
+.discussionCardFooter {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+}
+
+.discussionViewLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: none;
+  background: #2563eb;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.discussionViewLink:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+
+
+
+.discussionCard {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.discussionCard:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.discussionCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.discussionCardHeader h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.discussionCardHeader h3 a {
+  color: #1e40af;
+  text-decoration: none;
+}
+
+.discussionCardHeader h3 a:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.discussionStatus {
+  background: #dcfce7;
+  color: #15803d;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+
+
+.discussionCardAbstract {
+  color: #1e293b;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  background: #fafcff;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border-left: 3px solid #3b82f6;
+}
+
+.discussionCardStats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
+  color: #475569;
+  font-weight: 500;
+}
+
+.discussionCardStats span {
+  background: #e6f0ff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+}
+
+
+
+/* Empty State */
+.discussionsEmpty {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #f1f5f9;
+  border-radius: 1rem;
+  border: 2px dashed #94a3b8;
+}
+
+.discussionsEmpty p {
+  color: #475569;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.discussionsHint {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+/* Loading State */
+.discussionsContainer > div:first-child:contains("Завантаження") {
+  text-align: center;
+  padding: 3rem;
+  color: #2563eb;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .discussionsContainer {
+    padding: 0 1rem;
+    margin: 1rem auto;
+  }
+
+  .discussionsContainer h1 {
+    font-size: 1.75rem;
+  }
+
+  .discussionsFilterRow {
+    flex-direction: column;
+  }
+
+  .discussionsSearchInput,
+  .discussionsFilterSelect {
+    width: 100%;
+  }
+
+  .discussionCard {
+    padding: 1rem;
+  }
+
+  .discussionCardInfo {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .discussionCardHeader {
+    flex-direction: column;
+  }
+}
+
+/* DiscussionDetail.css - High Contrast White & Blue Theme */
+
+.discussionDetailContainer {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Back Link */
+.discussionDetailBackLink {
+  margin-bottom: 1.5rem;
+}
+
+.discussionDetailBackLink a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.875rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: gap 0.2s;
+}
+
+.discussionDetailBackLink a:hover {
+  gap: 0.75rem;
+  text-decoration: underline;
+}
+
+/* Title */
+.discussionDetailContainer h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+/* Info Card */
+.discussionDetailInfo {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.discussionDetailAuthor {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.discussionDetailInfo p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #334155;
+}
+
+.discussionDetailInfo strong {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.discussionDetailInfo a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.discussionDetailInfo a:hover {
+  text-decoration: underline;
+}
+
+.submission-status {
+  margin-left: 0.5rem;
+  font-weight: 600;
+}
+
+.status-accepted {
+  color: #15803d;
+  background: #dcfce7;
+  padding: 0.125rem 0.5rem;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+}
+
+/* Abstract Section */
+.discussionDetailAbstract {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.discussionDetailAbstract h3 {
+  background: #f8fafc;
+  margin: 0;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #0f172a;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.discussionDetailAbstract p {
+  margin: 0;
+  padding: 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #334155;
+}
+
+/* Stats */
+.discussionDetailStats {
+  display: flex;
+  gap: 1.5rem;
+  background: #eff6ff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.discussionDetailStats .stat-item {
+  font-size: 0.75rem;
+  color: #1e40af;
+  font-weight: 500;
+}
+
+/* Top Comments */
+.discussionTopComments {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.discussionTopComments h3 {
+  margin: 0 0 1rem 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.top-comment-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.top-comment-item:last-child {
+  border-bottom: none;
+}
+
+.top-comment-item strong {
+  font-size: 0.75rem;
+  color: #1e40af;
+}
+
+.top-comment-item p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #475569;
+}
+
+/* Sort Section */
+.discussionDetailSort {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.discussionDetailSort h3 {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #64748b;
+}
+
+.discussionSortSelect {
+  padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.375rem;
+  background: white;
+  font-size: 0.75rem;
+  color: #1e40af;
+  font-weight: 500;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%233b82f6' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 1rem;
+  appearance: none;
+}
+
+.discussionSortSelect:hover {
+  border-color: #3b82f6;
+}
+
+/* Add Comment Section */
+.discussionAddComment {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.discussionAddComment h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.discussionReplyTo {
+  background: #eff6ff;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 3px solid #3b82f6;
+}
+
+.discussionReplyTo p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #1e40af;
+  font-weight: 500;
+}
+
+.discussionReplyTo button {
+  background: none;
+  border: none;
+  color: #dc2626;
+  cursor: pointer;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.discussionCommentTextarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: 0.875rem;
+  resize: vertical;
+  transition: all 0.2s;
+  outline: none;
+  background: white;
+}
+
+.discussionCommentTextarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.discussionSubmitButton {
+  margin-top: 0.75rem;
+  background: #3b82f6;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 0.75rem;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.discussionSubmitButton:hover:not(:disabled) {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+.discussionSubmitButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Comments Section */
+.discussionCommentsSection {
+  margin-top: 1rem;
+}
+
+.discussionCommentsSection h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* Comment Card */
+.discussionComment {
+  margin-bottom: 1rem;
+}
+
+.discussionCommentReply {
+  margin-left: 2rem;
+  padding-left: 1rem;
+  border-left: 2px solid #e2e8f0;
+}
+
+.discussionCommentCard {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  transition: all 0.2s;
+}
+
+.discussionCommentCard:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* Comment Header */
+.discussionCommentHeader {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.discussionCommentAuthorInfo {
+  flex: 1;
+}
+
+.discussionCommentAuthorInfo strong a {
+  color: #1e40af;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.discussionCommentAuthorInfo strong a:hover {
+  text-decoration: underline;
+}
+
+.discussionCommentDate {
+  font-size: 0.7rem;
+  color: #94a3b8;
+  margin-left: 0.75rem;
+}
+
+.discussionCommentEdited {
+  font-size: 0.65rem;
+  color: #94a3b8;
+  margin-left: 0.5rem;
+  font-style: italic;
+}
+
+.discussionCommentRating {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #2563eb;
+  background: #eff6ff;
+  padding: 0.125rem 0.5rem;
+  border-radius: 2rem;
+}
+
+/* Comment Text */
+.discussionCommentText {
+  margin: 0.75rem 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #334155;
+}
+
+.discussionCommentDeleted {
+  margin: 0.75rem 0;
+  font-size: 0.875rem;
+  color: #94a3b8;
+  font-style: italic;
+}
+
+/* Comment Actions */
+.discussionCommentActions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.discussionCommentActions button {
+  background: none;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  transition: all 0.15s;
+  color: #64748b;
+}
+
+.discussionCommentActions button:first-child {
+  color: #059669;
+}
+
+.discussionCommentActions button:first-child:hover {
+  background: #d1fae5;
+}
+
+.discussionCommentActions button:nth-child(2) {
+  color: #dc2626;
+}
+
+.discussionCommentActions button:nth-child(2):hover {
+  background: #fee2e2;
+}
+
+.discussionCommentActions button:nth-child(3),
+.discussionCommentActions button:nth-child(4),
+.discussionCommentActions button:nth-child(5) {
+  color: #3b82f6;
+}
+
+.discussionCommentActions button:nth-child(3):hover,
+.discussionCommentActions button:nth-child(4):hover,
+.discussionCommentActions button:nth-child(5):hover {
+  background: #dbeafe;
+}
+
+.user-vote {
+  font-size: 0.7rem;
+  color: #059669;
+  font-weight: 500;
+  margin-left: 0.25rem;
+}
+
+.discussionDeleteButton {
+  color: #dc2626 !important;
+}
+
+.discussionDeleteButton:hover {
+  background: #fee2e2 !important;
+}
+
+/* Edit Mode */
+.discussionEditTextarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.375rem;
+  font-family: inherit;
+  font-size: 0.875rem;
+  margin: 0.5rem 0;
+  resize: vertical;
+  outline: none;
+}
+
+.discussionEditTextarea:focus {
+  border-color: #3b82f6;
+}
+
+.discussionEditActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.discussionEditActions button {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.7rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+}
+
+.discussionEditActions button:first-child {
+  background: #3b82f6;
+  color: white;
+}
+
+.discussionEditActions button:last-child {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+/* Empty State */
+.discussionCommentsSection > p {
+  text-align: center;
+  padding: 2rem;
+  background: #f8fafc;
+  border-radius: 0.75rem;
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+/* Loading State */
+.discussionDetailContainer > div:first-child:contains("Завантаження") {
+  text-align: center;
+  padding: 3rem;
+  color: #2563eb;
+  font-weight: 500;
+}
+
+/* Focus States */
+*:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .discussionDetailContainer {
+    padding: 0 1rem;
+    margin: 1rem auto;
+  }
+
+  .discussionDetailContainer h1 {
+    font-size: 1.35rem;
+  }
+
+  .discussionDetailInfo {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .discussionCommentReply {
+    margin-left: 0.75rem;
+    padding-left: 0.5rem;
+  }
+
+  .discussionCommentActions {
+    gap: 0.25rem;
+  }
+
+  .discussionCommentActions button {
+    padding: 0.25rem 0.375rem;
+  }
+
+  .discussionCommentHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+
+.discussionCardInfo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  color: #334155;
+  background: #f1f5f9;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.discussion-author {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.discussion-author a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.discussion-author a:hover {
+  text-decoration: underline;
+}
+
+.discussionCardInfo p {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.discussionCardInfo strong {
+  color: #0f172a;
+  margin-right: 0.25rem;
+}

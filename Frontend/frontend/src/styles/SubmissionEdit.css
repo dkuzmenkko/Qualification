@@ -1,0 +1,305 @@
+/* SubmissionEdit.css - High Contrast White & Blue Theme */
+
+.submissionEditContainer {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.submissionEditBackLink {
+  margin-bottom: 1.5rem;
+}
+
+.submissionEditBackLink a {
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 0.875rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.submissionEditBackLink a:hover {
+  text-decoration: underline;
+  gap: 0.5rem;
+}
+
+.submissionEditContainer h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.submissionEditError {
+  background: #fee2e2;
+  border-left: 3px solid #ef4444;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  color: #b91c1c;
+  font-size: 0.875rem;
+}
+
+.submissionEditInfo {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.submissionEditInfoRow {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.submissionEditInfoRow:last-child {
+  border-bottom: none;
+}
+
+.submissionEditInfoRow strong {
+  color: #0f172a;
+  font-weight: 600;
+  min-width: 140px;
+  font-size: 0.875rem;
+}
+
+.submissionEditStatus {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.status-draft {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.status-pending {
+  background: #fed7aa;
+  color: #9a3412;
+}
+
+.status-revision_required {
+  background: #fed7aa;
+  color: #9a3412;
+}
+
+.status-accepted {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.status-rejected {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.submissionEditReviewerComment p {
+  margin: 0;
+  flex: 1;
+  font-size: 0.875rem;
+  color: #334155;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.submissionEditForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.submissionEditField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.submissionEditLabel {
+  font-weight: 600;
+  color: #0f172a;
+  font-size: 0.875rem;
+}
+
+.submissionEditInput,
+.submissionEditTextarea {
+  padding: 0.75rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-family: inherit;
+  outline: none;
+  transition: all 0.2s;
+  color: #1e293b;
+}
+
+.submissionEditInput:focus,
+.submissionEditTextarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.submissionEditTextarea {
+  resize: vertical;
+}
+
+.submissionEditFileInput {
+  padding: 0.5rem 0;
+  font-size: 0.875rem;
+}
+
+.submissionEditCurrentFile {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.submissionEditCurrentFile a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.submissionEditCurrentFile a:hover {
+  text-decoration: underline;
+}
+
+.submissionEditHint {
+  font-size: 0.7rem;
+  color: #64748b;
+}
+
+.submissionEditButtons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.submissionEditSaveButton {
+  background: #2563eb;
+  border: none;
+  padding: 0.6rem 1.25rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.submissionEditSaveButton:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.submissionEditSaveButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.submissionEditSubmitButton {
+  background: #10b981;
+  border: none;
+  padding: 0.6rem 1.25rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.submissionEditSubmitButton:hover:not(:disabled) {
+  background: #059669;
+}
+
+.submissionEditSubmitButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.submissionEditCancelButton {
+  background: #f1f5f9;
+  border: 2px solid #e2e8f0;
+  padding: 0.6rem 1.25rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.submissionEditCancelButton:hover {
+  background: #e2e8f0;
+  border-color: #cbd5e1;
+}
+
+.submissionEditWarning {
+  background: #fef3c7;
+  border-left: 3px solid #f59e0b;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  color: #92400e;
+  margin-top: 0.5rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: #2563eb;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.error {
+  text-align: center;
+  padding: 3rem;
+  color: #dc2626;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .submissionEditContainer {
+    padding: 0 1rem;
+    margin: 1rem auto;
+  }
+
+  .submissionEditContainer h1 {
+    font-size: 1.5rem;
+  }
+
+  .submissionEditInfoRow {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .submissionEditInfoRow strong {
+    min-width: auto;
+  }
+
+  .submissionEditButtons {
+    flex-direction: column;
+  }
+
+  .submissionEditSaveButton,
+  .submissionEditSubmitButton,
+  .submissionEditCancelButton {
+    width: 100%;
+    text-align: center;
+  }
+}

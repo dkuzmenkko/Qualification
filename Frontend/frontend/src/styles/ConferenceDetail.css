@@ -1,0 +1,994 @@
+/* ConferenceDetail.css - Minimalist Design with Black Text */
+
+.conferenceDetailContainer {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Back Link */
+.conferenceDetailBackLink {
+  margin-bottom: 1.5rem;
+}
+
+.conferenceDetailBackLink a {
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.conferenceDetailBackLink a:hover {
+  text-decoration: underline;
+}
+
+/* Header */
+.conferenceDetailHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.conferenceDetailHeader h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+/* Warning */
+.conferenceDetailCannotSubmit {
+  background: #fef2f2;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  color: #7f1d1d;
+  border-left: 3px solid #ef4444;
+}
+
+/* ===== INFO GRID ===== */
+.conferenceDetailInfoGrid {
+  margin-bottom: 1.5rem;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e2e8f0;
+  flex-wrap: wrap;
+}
+
+.infoLabel {
+  font-weight: 600;
+  color: #0f172a;
+  font-size: 0.95rem;
+  min-width: 120px;
+}
+
+.infoValue {
+  color: #1e293b;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* Fix for organizer alignment */
+.organizer-info {
+  align-items: center;
+}
+
+.organizer-info .infoValue {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Type Badge */
+.conference-type-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.conference-type-online {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.conference-type-offline {
+  background: #fed7aa;
+  color: #9a3412;
+}
+
+.conference-type-hybrid {
+  background: #e9d5ff;
+  color: #6b21a5;
+}
+
+.deadline-past {
+  color: #dc2626;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+.deadline-open {
+  color: #059669;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+.online-link {
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 0.85rem;
+  margin-left: 0.5rem;
+}
+
+.online-link:hover {
+  text-decoration: underline;
+}
+
+/* Institution & Address */
+.conferenceDetailInstitution,
+.conferenceDetailAddress {
+  padding: 0.75rem 0;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.institutionLabel,
+.addressLabel {
+  font-weight: 600;
+  color: #0f172a;
+  margin-right: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.institutionValue,
+.addressValue {
+  color: #1e293b;
+  font-size: 0.95rem;
+}
+
+/* ===== REVIEWERS ===== */
+.conferenceDetailReviewersSection {
+  margin: 1.5rem 0;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.conferenceDetailReviewersSection h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0 0 0.75rem 0;
+  letter-spacing: 0.5px;
+}
+
+.conferenceDetailReviewersList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.conferenceDetailReviewerLink {
+  text-decoration: none;
+}
+
+.conferenceDetailReviewerCard {
+  background: #f1f5f9;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.85rem;
+  color: #1e40af;
+  transition: background 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.conferenceDetailReviewerCard:hover {
+  background: #e2e8f0;
+}
+
+.noReviewers {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* ===== DESCRIPTION ===== */
+.conferenceDetailDescription {
+  margin: 1.5rem 0;
+}
+
+.descriptionHeader h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0 0 0.75rem 0;
+  letter-spacing: 0.5px;
+}
+
+.descriptionContent {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #1e293b;
+  background: #fafafa;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+/* ===== FILES ===== */
+.conferenceDetailFilesSection {
+  margin: 1.5rem 0;
+}
+
+.conferenceDetailFilesSection h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0 0 0.75rem 0;
+  letter-spacing: 0.5px;
+}
+
+.conferenceDetailFileItem {
+  margin-bottom: 0.5rem;
+}
+
+.conferenceDetailFileButton {
+  background: none;
+  border: none;
+  color: #2563eb;
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+.conferenceDetailFileButton:hover {
+  text-decoration: underline;
+}
+
+.conferenceDetailFileButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.conferenceDetailAdditionalFiles h4 {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #0f172a;
+  margin: 0.5rem 0 0.25rem 0;
+}
+
+.conferenceDetailFileLink {
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.conferenceDetailFileLink:hover {
+  text-decoration: underline;
+}
+
+.noFiles {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* ===== SUBMIT BUTTON ===== */
+.conferenceDetailSubmitSection {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.conferenceDetailSubmitButton {
+  background: #2563eb;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.conferenceDetailSubmitButton:hover {
+  background: #1d4ed8;
+}
+
+/* ===== ORGANIZER SECTION ===== */
+.conferenceDetailOrganizerSection {
+  margin: 1.5rem 0;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.conferenceDetailOrganizerSection h2 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0 0 1rem 0;
+  letter-spacing: 0.5px;
+}
+
+.conferenceDetailInviteSection h3,
+.conferenceDetailAdminSection h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0 0 0.5rem 0;
+}
+
+.conferenceDetailInviteInfo {
+  background: #f8fafc;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+  border-left: 3px solid #3b82f6;
+}
+
+.invite-info-text {
+  font-size: 0.85rem;
+  color: #1e293b;
+  margin: 0 0 0.5rem 0;
+}
+
+.invite-info-text strong {
+  color: #0f172a;
+}
+
+.highlight-text {
+  font-weight: 600;
+  color: #2563eb;
+}
+
+.invite-info-example {
+  font-size: 0.8rem;
+  color: #475569;
+  margin: 0;
+}
+
+.invite-info-example code {
+  background: #e2e8f0;
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+}
+
+.conferenceDetailInviteForm,
+.conferenceDetailAssignForm {
+  margin-bottom: 1rem;
+}
+
+.invite-input-wrapper {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.conferenceDetailInviteInput,
+.conferenceDetailAssignInput {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  outline: none;
+  color: #1e293b;
+}
+
+.conferenceDetailInviteInput:focus,
+.conferenceDetailAssignInput:focus {
+  border-color: #3b82f6;
+}
+
+.conferenceDetailInviteButton,
+.conferenceDetailAssignButton,
+.conferenceDetailExportButton {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #1e293b;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.conferenceDetailInviteButton:hover,
+.conferenceDetailAssignButton:hover,
+.conferenceDetailExportButton:hover {
+  background: #e2e8f0;
+}
+
+.conferenceDetailInviteButton:disabled,
+.conferenceDetailAssignButton:disabled,
+.conferenceDetailExportButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.invite-help-text {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: #fafafa;
+  border-radius: 0.5rem;
+}
+
+.invite-help-text span {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.invite-help-text ul {
+  margin: 0.25rem 0 0 1rem;
+  padding: 0;
+}
+
+.invite-help-text li {
+  margin: 0.125rem 0;
+}
+
+.invite-help-text a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.invite-help-text a:hover {
+  text-decoration: underline;
+}
+
+.conferenceDetailExportButtons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+/* ===== ADMIN SECTION ===== */
+.conferenceDetailAdminSection {
+  margin: 1.5rem 0;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.conferenceDetailAdminSection h2 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0 0 1rem 0;
+  letter-spacing: 0.5px;
+}
+
+/* ===== INVITATION ALERT ===== */
+.conferenceDetailInvitationAlert {
+  background: #eff6ff;
+  padding: 0.75rem 1rem;
+  margin: 1.5rem 0;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-left: 3px solid #3b82f6;
+}
+
+.conferenceDetailInvitationAlert p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #1e40af;
+}
+
+.conferenceDetailInvitationResponseButton {
+  background: #3b82f6;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 1.5rem;
+  font-size: 0.85rem;
+  color: white;
+  cursor: pointer;
+}
+
+.conferenceDetailInvitationResponseButton:hover {
+  background: #2563eb;
+}
+
+/* ===== SUBMISSIONS ===== */
+.conferenceDetailSubmissionsSection {
+  margin: 1.5rem 0;
+}
+
+.conferenceDetailSubmissionsSection h2 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0 0 1rem 0;
+  letter-spacing: 0.5px;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.conferenceDetailSubmissionCard {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.conferenceDetailSubmissionCard:last-child {
+  border-bottom: none;
+}
+
+.conferenceDetailSubmissionContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.conferenceDetailSubmissionTitle {
+  font-weight: 600;
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.conferenceDetailSubmissionTitle:hover {
+  text-decoration: underline;
+}
+
+.conferenceDetailSubmissionMeta {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-top: 0.25rem;
+}
+
+.conferenceDetailSubmitReviewButton {
+  background: #10b981;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+.conferenceDetailSubmitReviewButton:hover {
+  background: #059669;
+}
+
+.noSubmissions {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* ===== SIMILAR ===== */
+.conferenceDetailSimilarSection {
+  margin: 1.5rem 0;
+}
+
+.conferenceDetailSimilarSection h2 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0 0 1rem 0;
+  letter-spacing: 0.5px;
+}
+
+.conferenceDetailSimilarList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.conferenceDetailSimilarLink {
+  text-decoration: none;
+}
+
+.conferenceDetailSimilarCard {
+  background: #f8fafc;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  transition: background 0.2s;
+  border: 1px solid #e2e8f0;
+}
+
+.conferenceDetailSimilarCard:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.conferenceDetailSimilarTitle {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #1e40af;
+  margin: 0;
+}
+
+.conferenceDetailSimilarDate {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin: 0.25rem 0 0 0;
+}
+
+/* ===== LOADING ===== */
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: #2563eb;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .conferenceDetailContainer {
+    padding: 0 1rem;
+  }
+
+  .conferenceDetailHeader h1 {
+    font-size: 1.5rem;
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .infoItem {
+    padding: 0.75rem 0;
+  }
+
+  .infoLabel {
+    min-width: 100px;
+    font-size: 0.9rem;
+  }
+
+  .infoValue {
+    font-size: 0.9rem;
+  }
+
+  .invite-input-wrapper {
+    flex-direction: column;
+  }
+
+  .conferenceDetailInvitationAlert {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .conferenceDetailSimilarList {
+    flex-direction: column;
+  }
+
+  .conferenceDetailExportButtons {
+    flex-direction: column;
+  }
+
+  .conferenceDetailExportButtons button {
+    width: 100%;
+  }
+}
+
+/* Announcements Component Styles */
+
+.announcements-section {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.announcements-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.announcements-header h2 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.announcements-add-button {
+  background: #2563eb;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.announcements-add-button:hover {
+  background: #1d4ed8;
+}
+
+.announcements-form {
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e2e8f0;
+}
+
+.announcements-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.announcements-form label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #0f172a;
+  margin-bottom: 0.25rem;
+}
+
+.announcements-form input[type="text"],
+.announcements-form textarea {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  color: #1e293b;
+  background: white;
+}
+
+.announcements-form input[type="text"]:focus,
+.announcements-form textarea:focus {
+  border-color: #3b82f6;
+}
+
+.announcements-form textarea {
+  resize: vertical;
+}
+
+.checkbox-group {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: auto;
+  cursor: pointer;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.submit-button {
+  background: #10b981;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.submit-button:hover:not(:disabled) {
+  background: #059669;
+}
+
+.submit-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.announcements-list h3 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 1rem 0 0.75rem 0;
+}
+
+.no-announcements {
+  font-size: 0.85rem;
+  color: #64748b;
+  text-align: center;
+  padding: 1.5rem;
+  background: #fafafa;
+  border-radius: 0.5rem;
+}
+
+.announcement-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  transition: box-shadow 0.2s;
+}
+
+.announcement-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.announcement-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.announcement-header h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0 0 0.25rem 0;
+}
+
+.announcement-date {
+  font-size: 0.7rem;
+  color: #64748b;
+}
+
+.announcement-stats {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.stat-badge {
+  background: #f1f5f9;
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+  font-size: 0.65rem;
+  color: #475569;
+}
+
+.announcement-content {
+  margin-bottom: 0.75rem;
+}
+
+.announcement-content p {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #334155;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.announcement-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #f1f5f9;
+  font-size: 0.7rem;
+  color: #64748b;
+}
+
+.author {
+  font-weight: 500;
+  color: #475569;
+}
+
+.sent-at {
+  color: #64748b;
+}
+
+.announcement-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.resend-button {
+  background: none;
+  border: none;
+  color: #2563eb;
+  font-size: 0.7rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  transition: background 0.2s;
+}
+
+.resend-button:hover:not(:disabled) {
+  background: #dbeafe;
+  text-decoration: underline;
+}
+
+.resend-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  color: #dc2626;
+  font-size: 0.7rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  transition: background 0.2s;
+}
+
+.delete-button:hover {
+  background: #fee2e2;
+}
+
+@media (max-width: 768px) {
+  .announcements-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .announcements-add-button {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .announcement-header {
+    flex-direction: column;
+  }
+  
+  .announcement-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .announcement-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

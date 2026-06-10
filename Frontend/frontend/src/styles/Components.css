@@ -1,0 +1,82 @@
+/* Основний контейнер */
+.navUser,
+.navAdmin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+
+  /* ГОЛОВНЕ — без фону */
+  background: transparent;
+  
+  /* щоб не було відчуття контейнера */
+  box-shadow: none;
+  border: none;
+}
+
+/* Лінки */
+.navLink {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.navLink:hover {
+  color: #1976d2;
+}
+
+/* Для адмінки білий текст */
+.navLinkWhite {
+  color: white;
+}
+
+/* Текст */
+.textWhite {
+  color: white;
+}
+
+.textMuted {
+  color: #777;
+  font-size: 14px;
+}
+
+/* Кнопка */
+.btnDanger {
+  background: none;
+  border: none;
+  color: #e53935;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.btnDanger:hover {
+  color: #b71c1c;
+}
+
+/* Аватар */
+.navAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Flex допоміжні */
+.flexStart {
+  display: flex;
+  align-items: center;
+}
+
+.gap20 {
+  gap: 20px;
+}
+
+.gap10 {
+  gap: 10px;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}

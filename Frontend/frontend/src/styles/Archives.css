@@ -1,0 +1,382 @@
+/* Archives.css - Modern High Contrast White & Blue Theme */
+
+.archivesContainer {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.archivesContainer h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+}
+
+/* Tabs Navigation */
+.archivesTabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0;
+}
+
+.archivesTab {
+  background: none;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #64748b;
+  cursor: pointer;
+  position: relative;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+/* 
+.archivesTab:hover {
+  color: #2563eb;
+  background: #f1f5f9;
+} */
+
+.archivesTab.active {
+  color: #2563eb;
+  background: white;
+}
+
+.archivesTab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  border-radius: 3px 3px 0 0;
+}
+
+/* Filters Section */
+.archivesFilters {
+  background: #f8fafc;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #cbd5e1;
+}
+
+.archivesFilterRow {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.archivesSearchInput {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.75rem 1rem;
+  border: 2px solid #cbd5e1;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+  outline: none;
+  background: white;
+}
+
+.archivesSearchInput:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.archivesFilterSelect {
+  padding: 0.75rem 2rem 0.75rem 1rem;
+  border: 2px solid #cbd5e1;
+  border-radius: 0.75rem;
+  background: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1e3a8a;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%233b82f6' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1.25rem;
+  appearance: none;
+}
+
+.archivesFilterSelect:hover {
+  border-color: #2563eb;
+  background: #f0f9ff;
+}
+
+.archivesClearButton {
+  background: #ef4444;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.archivesClearButton:hover {
+  background: #dc2626;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+/* Empty State */
+.archivesEmpty {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #f1f5f9;
+  border-radius: 1rem;
+  border: 2px dashed #94a3b8;
+}
+
+.archivesEmpty p {
+  color: #475569;
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+
+/* Conferences List */
+.archivesConferencesList,
+.archivesSubmissionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Conference Card */
+.archivesConferenceCard,
+.archivesSubmissionCard {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* .archivesConferenceCard:hover,
+.archivesSubmissionCard:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+} */
+
+.archivesConferenceHeader,
+.archivesSubmissionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.archivesConferenceHeader h3,
+.archivesSubmissionHeader h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.archivesConferenceHeader h3 a,
+.archivesSubmissionHeader h3 a {
+  color: #1e40af;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+/* .archivesConferenceHeader h3 a:hover,
+.archivesSubmissionHeader h3 a:hover {
+  color: #2563eb;
+  text-decoration: underline;
+} */
+
+.archivesConferenceYear {
+  background: #dbeafe;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #1e40af;
+  border: 1px solid #3b82f6;
+}
+
+/* Info Grid */
+.archivesConferenceInfo,
+.archivesSubmissionInfo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  background: #f8fafc;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.archivesConferenceInfo p,
+.archivesSubmissionInfo p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #1e293b;
+}
+
+.archivesConferenceInfo p strong,
+.archivesSubmissionInfo p strong {
+  font-weight: 700;
+  color: #475569;
+  min-width: 110px;
+  display: inline-block;
+}
+
+/* Stats Section */
+.archivesConferenceStats {
+  display: flex;
+  gap: 1rem;
+  margin: 0.75rem 0;
+  padding: 0.5rem 0.75rem;
+  background: #e6f0ff;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #1e40af;
+}
+
+.archivesConferenceStats span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* View Link Button */
+.archivesViewLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: none;
+  background: #2563eb;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+/* .archivesViewLink:hover {
+  gap: 0.75rem;
+  background: #1d4ed8;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+} */
+
+/* Status Badge for Submissions (if needed) */
+.archivesSubmissionStatus {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.status-accepted {
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #10b981;
+}
+
+/* Loading State */
+.loading {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1rem;
+  color: #2563eb;
+  font-weight: 500;
+}
+
+
+/* Focus States */
+*:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .archivesContainer {
+    padding: 0 1rem;
+    margin: 1rem auto;
+  }
+
+  .archivesContainer h1 {
+    font-size: 1.75rem;
+  }
+
+  .archivesTabs {
+    gap: 0.25rem;
+  }
+
+  .archivesTab {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .archivesFilterRow {
+    flex-direction: column;
+  }
+
+  .archivesSearchInput,
+  .archivesFilterSelect,
+  .archivesClearButton {
+    width: 100%;
+  }
+
+  .archivesClearButton {
+    white-space: normal;
+  }
+
+  .archivesConferenceCard,
+  .archivesSubmissionCard {
+    padding: 1rem;
+  }
+
+  .archivesConferenceInfo,
+  .archivesSubmissionInfo {
+    grid-template-columns: 1fr;
+  }
+
+  .archivesConferenceInfo p strong,
+  .archivesSubmissionInfo p strong {
+    min-width: auto;
+    display: inline;
+    margin-right: 0.5rem;
+  }
+
+  .archivesConferenceHeader,
+  .archivesSubmissionHeader {
+    flex-direction: column;
+  }
+}
+
+/* Additional improvements for better readability */
+.archivesConferenceInfo p,
+.archivesSubmissionInfo p {
+  line-height: 1.5;
+}
+
+.archivesConferenceInfo p:not(:last-child),
+.archivesSubmissionInfo p:not(:last-child) {
+  margin-bottom: 0.25rem;
+}

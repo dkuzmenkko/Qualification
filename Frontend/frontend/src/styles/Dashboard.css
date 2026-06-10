@@ -1,0 +1,580 @@
+/* Dashboard.css - Сучасний дизайн */
+
+/* Main Container */
+.dashboardContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+
+/* Header Section */
+.dashboardHeader {
+  background: #f9fafb;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+  border: 1px solid #e5e7eb;
+
+}
+
+.dashboardHeader h1 {
+      font-size: 2.2rem;
+  font-weight: 600;
+  font-size: 2.5rem;
+
+  background: #2563eb;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.dashboardSubtitle {
+  color: #6b7280;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* Sections */
+.dashboardSection {
+  
+  background: #f9fafb;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+}
+
+
+.dashboardSection h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 3px solid #667eea;
+  display: inline-block;
+}
+
+/* Stats Grid - 3 cards per row */
+.dashboardStatsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Responsive for stats grid */
+@media (max-width: 1024px) {
+  .dashboardStatsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .dashboardStatsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dashboardStatCard {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  cursor: pointer;
+  border: 1px solid #e5e7eb;
+  position: relative;
+  overflow: hidden;
+  
+}
+.dashboardStatCard h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+  margin-bottom: 0.75rem;
+}
+
+.dashboardStatNumber {
+  font-size: 2.2rem;     
+  font-weight: 500;       
+  color: #1f232b;    
+}
+
+/* Stat Card Variants - only border colors without top line */
+.dashboardStatCardDefault {
+  border-left: 4px solid #9ca3af4d;
+}
+
+.dashboardStatCardBlue {
+  border-left: 4px solid #4299e17e;
+}
+
+.dashboardStatCardOrange {
+  border-left: 4px solid #ed88366e;
+}
+
+.dashboardStatCardGreen {
+  border-left: 4px solid #10813f57;
+}
+
+.dashboardStatCardRed {
+  border-left: 4px solid #911c1c88;
+}
+
+.dashboardStatCardAmber {
+  border-left: 4px solid #f6ad55;
+}
+
+.dashboardStatCardCyan {
+  border-left: 4px solid #38b2ac73;
+}
+
+.dashboardStatCardLightBlue {
+  border-left: 4px solid #90cdf4;
+}
+
+/* Action Buttons Container */
+.dashboardActionButtons,
+.dashboardActions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Button Styles */
+.dashboardPrimaryButton,
+.dashboardSuccessButton,
+.dashboardSecondaryButton,
+.dashboardSmallButton,
+.dashboardExportButton {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+
+.dashboardPrimaryButton {
+  background-color: #4d2ddd; 
+  color: #fff;
+  padding: 14px 125px;
+  border-radius: 18px;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  font-size: 17px;
+}
+
+
+
+.dashboardSuccessButton {
+  border: #1f2937;
+  font-family: inherit;
+  color: rgb(0, 0, 0);
+}
+
+.dashboardSecondaryButton {
+  background: white;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+
+.dashboardSmallButton {
+  padding: 0.5rem 1rem;
+  font-size: 0.8125rem;
+}
+
+.dashboardBlueButton {
+  background: #4299e1;
+  color: white;
+}
+
+.dashboardOrangeButton {
+  background: #ed8936;
+  color: white;
+}
+
+.dashboardExportButton {
+  background: white;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+}
+
+.dashboardExportButton:hover {
+  background: #f9fafb;
+}
+
+/* Conference Cards Grid - 3 per row */
+.dashboardMyConferencesList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive for conference cards */
+@media (max-width: 1024px) {
+  .dashboardMyConferencesList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .dashboardMyConferencesList {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dashboardConferenceCard,
+.dashboardOrganizerConferenceCard {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+
+.dashboardConferenceActive {
+  border-left: 4px solid #48bb78;
+}
+
+.dashboardConferenceInactive {
+  border-left: 4px solid #9ca3af;
+  opacity: 0.8;
+}
+
+.dashboardConferenceHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.dashboardConferenceHeader > div:first-child {
+  flex: 1;
+}
+
+.dashboardConferenceTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.dashboardConferenceTitle a {
+  color: #1f2937;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.dashboardConferenceTitle a:hover {
+  color: #667eea;
+}
+
+.dashboardActiveBadge {
+  display: inline-block;
+  background: #48bb78;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.dashboardConferenceMeta {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+
+.dashboardConferenceActions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.dashboardConferenceActions .dashboardSmallButton {
+  flex: 1;
+  text-align: center;
+  justify-content: center;
+}
+
+.dashboardExportButtons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+  flex-wrap: wrap;
+}
+
+.dashboardExportButtons .dashboardExportButton {
+  flex: 1;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Review Items */
+.dashboardReviewItem,
+.dashboardDraftItem,
+.dashboardInvitationItem,
+.dashboardRecentItem {
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  background: white;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.dashboardReviewItem:hover,
+.dashboardDraftItem:hover,
+.dashboardInvitationItem:hover,
+.dashboardRecentItem:hover {
+  background: #f9fafb;
+  transform: translateX(4px);
+}
+
+.dashboardReviewItem a,
+.dashboardDraftItem a,
+.dashboardRecentItem a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.dashboardReviewItem a:hover,
+.dashboardDraftItem a:hover,
+.dashboardRecentItem a:hover {
+  color: #5a67d8;
+  text-decoration: underline;
+}
+
+.dashboardEditLink {
+  margin-left: 1rem;
+  font-size: 0.875rem;
+  color: #ed8936;
+  text-decoration: none;
+}
+
+.dashboardEditLink:hover {
+  text-decoration: underline;
+}
+
+/* Categories List */
+.dashboardCategoriesList {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+}
+
+.dashboardCategoriesList h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #374151;
+}
+
+.dashboardCategoryItem {
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.dashboardCategoryItem:last-child {
+  border-bottom: none;
+}
+
+.dashboardCategoryLink {
+  color: #667eea;
+  cursor: pointer;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.dashboardCategoryLink:hover {
+  color: #5a67d8;
+  text-decoration: underline;
+}
+
+/* View All Links */
+.dashboardViewAll,
+.dashboardViewAllLink {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.dashboardViewAllLink {
+  display: inline-block;
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 1rem;
+
+}
+
+.dashboardViewAllLink:hover {
+  color: #5a67d8;
+  text-decoration: underline;
+}
+
+/* Recent items grid */
+.dashboardRecentItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Loading State */
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: white;
+}
+
+.loadingSpinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #e5e7eb;
+  border-radius: 50%;
+  border-top-color: #667eea;
+
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboardContainer {
+    padding: 1rem;
+  }
+  
+  .dashboardHeader {
+    padding: 1.5rem;
+  }
+  
+  .dashboardHeader h1 {
+    font-size: 1.75rem;
+  }
+  
+  .dashboardStatNumber {
+    font-size: 1.75rem;
+  }
+  
+  .dashboardConferenceHeader {
+    flex-direction: column;
+  }
+  
+  .dashboardConferenceActions {
+    width: 100%;
+  }
+  
+  .dashboardConferenceActions .dashboardSmallButton {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .dashboardExportButtons {
+    flex-direction: column;
+  }
+  
+  .dashboardExportButton {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .dashboardActionButtons {
+    flex-direction: column;
+  }
+  
+  .dashboardActionButtons a {
+    width: 100%;
+  }
+  
+  .dashboardActionButtons button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboardStatCard {
+    text-align: center;
+  }
+  
+  .dashboardSection {
+    padding: 1rem;
+  }
+  
+  .dashboardReviewItem p,
+  .dashboardDraftItem p {
+    font-size: 0.875rem;
+  }
+  
+  .dashboardRecentItem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Focus States */
+button:focus,
+a:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  .dashboardActionButtons,
+  .dashboardExportButtons,
+  .dashboardSmallButton,
+  .dashboardPrimaryButton {
+    display: none;
+  }
+  
+  .dashboardContainer {
+    padding: 0;
+  }
+  
+  .dashboardSection {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+  
+  body {
+    background: white;
+  }
+}
+

@@ -1,0 +1,191 @@
+.captchaModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.captchaModalContainer {
+  background-color: white;
+  border-radius: 12px;
+  padding: 24px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.captchaModalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.captchaModalTitle {
+  margin: 0;
+  font-size: 20px;
+}
+
+.captchaModalCloseButton {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #999;
+}
+
+.captchaModalBody {
+  margin-bottom: 20px;
+}
+
+.captchaModalLabel {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.captchaModalImageSection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.captchaModalLoadingBox {
+  width: 200px;
+  height: 50px;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.captchaModalImage {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  height: 50px;
+  background-color: #f8f9fa;
+}
+
+.captchaModalRefreshButton {
+  padding: 8px 12px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.captchaModalRefreshButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.captchaModalInput {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.captchaModalError {
+  color: #f44336;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.captchaModalFooter {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.captchaModalCancelButton {
+  padding: 8px 16px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.captchaModalVerifyButton {
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.captchaModalVerifyButton:disabled {
+  cursor: not-allowed;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.toastContainer {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  animation: slideIn 0.3s ease-out;
+}
+
+.toastContent {
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 250px;
+  max-width: 400px;
+}
+
+.toastIcon {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.toastMessage {
+  flex: 1;
+  font-size: 14px;
+}
+
+.toastCloseButton {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0 5px;
+}

@@ -1,0 +1,518 @@
+@font-face {
+  font-family: 'HeroFont';
+  src: url('../assets/KyivRegion.ttf') format('truetype');
+  font-weight: bold;
+}
+
+/* body{
+  font-family: 'HeroFont', sans-serif;
+} */
+
+.auth-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background: white; 
+}
+
+/* LEFT SIDE */
+.auth-left {
+  background: url('../assets/BackLog.jpg') center/cover no-repeat;
+  width: 50%;
+  position: relative;
+    font-family: 'HeroFont', sans-serif;
+}
+
+.auth-left-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(90, 60, 150, 0.6),
+    rgba(20, 10, 40, 0.9)
+  );
+}
+
+.auth-left-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.auth-left-content h1 {
+  font-size: 78px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 2px;;
+}
+.auth-left-content p {
+  font-size:28px;
+}
+
+/* RIGHT SIDE */
+.auth-right {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  border-radius: 16px;
+}
+/* HEADER */
+.auth-header h2 {
+  color: #222;
+}
+
+.auth-header p {
+  color: #666;
+}
+
+/* INPUTS */
+.auth-input,
+.auth-select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: white;
+  color: #222;
+}
+
+.auth-input::placeholder {
+  color: #aaa;
+}
+/* BUTTON */
+.auth-button-primary {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #7b5cff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.auth-button-primary:hover {
+  background: #6a4ee6;
+}
+
+/* LINKS */
+.auth-link {
+  color: #666;
+}
+
+.auth-link:hover {
+  color: #000;
+}
+
+/* ROWS */
+.auth-row {
+  display: flex;
+  gap: 10px;
+}
+
+.auth-field-half {
+  flex: 1;
+}
+
+.auth-back-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgb(255, 255, 255);
+  color: #000000;
+  border: none;
+  border-radius: 18px;
+  padding: 10px 36px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  /* font-family: 'HeroFont', sans-serif; */
+  z-index: 10; 
+}
+
+.auth-back-button:hover {
+    background: linear-gradient(
+    180deg,
+    rgba(90, 60, 150, 0.116),
+    rgba(20, 10, 40, 0.342)
+  );
+  color: #fcfbfb;
+}
+
+/* Заголовки та текст */
+.auth-title {
+  font-family: 'HeroFont', sans-serif;
+  font-size: 42px;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.auth-subtitle {
+ 
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 24px;
+ 
+}
+
+.auth-input {
+  width: 100%;
+  padding: 8px 0;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background: transparent;
+  
+  font-size: 16px;
+  
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.auth-input:focus {
+  outline: none;
+  border-bottom-color: #7b5cff;
+}
+
+/* Кнопка Увійти чорна */
+.auth-button-primary {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #222;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+  margin-top: 8px;
+  font-weight: 100;
+}
+
+.auth-button-primary:hover {
+  background: #000;
+}
+
+/* Кнопка “Створити новий акаунт” маленька підписом */
+.auth-link-text {
+  display: block;
+  margin: 12px auto 0 auto;
+  background: none;
+  border: none;
+  color: #000000;
+  font-size: 14px;
+  
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.auth-link-text:hover {
+  color: #222;
+}
+
+.auth-links-center {
+  text-align: center;
+}
+
+.auth-register-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-height: calc( 90vh - 200px);
+}
+.auth-scrollable-fields {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 10px;
+  margin-right: -10px;
+  margin-bottom: 20px;
+}
+
+/* Стилізація скролбару */
+.auth-scrollable-fields::-webkit-scrollbar {
+  width: 6px;
+}
+
+.auth-scrollable-fields::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.auth-scrollable-fields::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+.auth-scrollable-fields::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+/* Для Firefox */
+.auth-scrollable-fields {
+  scrollbar-width: thin;
+  scrollbar-color: #ccc #f1f1f1;
+}
+
+/* Статичний футер з кнопкою */
+.auth-sticky-footer {
+  flex-shrink: 0;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+  background: white;
+}
+
+/* Адаптація для мобільних пристроїв */
+@media (max-width: 768px) {
+  .auth-register-wrapper {
+    max-height: calc(100vh - 160px);
+  }
+  
+  .auth-card {
+    padding: 20px;
+  }
+}
+
+
+/* Додати до Auth.css - покращені стилі для категорій */
+
+/* Контейнер для чекбоксів категорій */
+.auth-checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  max-height: 180px;
+  overflow-y: auto;
+  padding: 8px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+/* Стилізація скролбару для списку категорій */
+.auth-checkbox-group::-webkit-scrollbar {
+  width: 4px;
+}
+
+.auth-checkbox-group::-webkit-scrollbar-track {
+  background: #e9ecef;
+  border-radius: 2px;
+}
+
+.auth-checkbox-group::-webkit-scrollbar-thumb {
+  background: #adb5bd;
+  border-radius: 2px;
+}
+
+
+/* Альтернативний варіант - як chips (більш сучасний) */
+.auth-chips-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  max-height: 160px;
+  overflow-y: auto;
+  padding: 8px;
+  
+}
+
+.auth-chip {
+  padding: 6px 14px;
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #495057;
+  user-select: none;
+}
+
+
+.auth-chip-active {
+
+  background: linear-gradient( 180deg, rgba(90, 60, 150, 0.6), rgba(20, 10, 40, 0.9));
+  border-color: rgba(20, 10, 40, 0.9);
+  color: white;
+
+}
+
+.auth-field .auth-hint {
+  display: block;
+  margin-top: 4px; /* відступ від поля / лейблу */
+  margin-bottom: 16px; /* відступ до наступного поля */
+  font-size: 13px;
+  color: #666;
+}
+
+.auth-select {
+
+  color: #222;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: white;
+}
+
+
+.captchaModalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.captchaModalContainer {
+  background: white;
+  border-radius: 16px;
+  width: 400px;
+  max-width: 90%;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  font-weight: 100;
+}
+
+.captchaModalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.captchaModalTitle {
+  font-size: 22px;
+  color: #222;
+}
+
+.captchaModalCloseButton {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #222;
+}
+
+.captchaModalBody {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.captchaModalLabel {
+  font-size: 14px;
+  color: #222;
+}
+
+.captchaModalImageSection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.captchaModalImage {
+  height: 60px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.captchaModalRefreshButton {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #222;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+.captchaModalRefreshButton:hover {
+  background: #000;
+}
+
+
+.captchaModalError {
+  color: rgb(133, 0, 0);
+  font-size: 13px;
+}
+
+.captchaModalFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.captchaModalCancelButton {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid #222;
+  background: white;
+  color: #222;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.captchaModalCancelButton:hover {
+  background: #f0f0f0;
+}
+
+.captchaModalVerifyButton {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background: #222;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.captchaModalVerifyButton:hover {
+  background: #000;
+}
+
+.auth-email-highlight {
+  color: #000;        
+  font-weight: 600;
+}
+
+.auth-email-text {
+  color: #555;     
+}
+
+.auth-button-secondary {
+  background-color: #fff; 
+  color: #000;
+  border: 1px solid #000;
+  padding: 10px 20px;
+  border-radius: 8px; 
+  cursor: pointer;
+  font-size: 14px;
+  display: block; 
+  margin: 15px auto 0 auto; 
+}
+
+.auth-button-secondary:hover {
+  background: #f0f0f0;
+}
+

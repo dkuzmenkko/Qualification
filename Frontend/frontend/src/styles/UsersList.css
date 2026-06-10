@@ -1,0 +1,496 @@
+/* UsersList.css - High Contrast White & Blue Theme */
+
+.usersListContainer {
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Header */
+.usersListHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.usersListHeader h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.usersCount {
+  background: #f1f5f9;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1e40af;
+}
+
+/* Filter Section */
+.usersFilterSection {
+  background: #f8fafc;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #cbd5e1;
+}
+
+.usersFilterSection h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #3b82f6;
+}
+
+.usersFilterControls {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.usersSearchInput {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.75rem 1rem;
+  border: 2px solid #cbd5e1;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  outline: none;
+  background: white;
+  transition: all 0.2s;
+}
+
+
+
+.usersSearchInput:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.usersSelect {
+  padding: 0.75rem 2rem 0.75rem 1rem;
+  border: 2px solid #cbd5e1;
+  border-radius: 0.75rem;
+  background: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1e3a8a;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%233b82f6' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1.25rem;
+  appearance: none;
+}
+.usersSelect:hover {
+  border-color: #2563eb;
+  background: #f0f9ff;
+}
+
+.usersCheckboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  border: 2px solid #cbd5e1;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.usersCheckboxLabel:hover {
+  border-color: #2563eb;
+  background: #f0f9ff;
+}
+
+.usersCheckboxLabel input {
+  width: 1.125rem;
+  height: 1.125rem;
+  cursor: pointer;
+  accent-color: #2563eb;
+}
+
+/* Active Filter Banner */
+.usersActiveFilter {
+  background: #dbeafe;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-left: 4px solid #2563eb;
+}
+
+.usersActiveFilter span {
+  font-size: 0.875rem;
+  color: #1e3a8a;
+  font-weight: 500;
+}
+
+.usersClearButton {
+  background: #ef4444;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.usersClearButton:hover {
+  background: #dc2626;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+}
+
+/* Empty State */
+.usersEmptyState {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #f1f5f9;
+  border-radius: 1rem;
+  border: 2px dashed #94a3b8;
+}
+
+.usersEmptyState p {
+  color: #475569;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.usersShowAllButton {
+  background: #2563eb;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.usersShowAllButton:hover {
+  background: #1d4ed8;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* Table */
+.usersList {
+  overflow-x: auto;
+  border-radius: 1rem;
+  border: 1px solid #e2e8f0;
+  background: white;
+}
+
+.usersTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.usersTable thead {
+  background: #f8fafc;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.usersTable th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #0f172a;
+  font-size: 0.875rem;
+}
+
+.usersTable td {
+  padding: 0.875rem 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  color: #334155;
+  vertical-align: middle;
+}
+
+.usersTable tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* User Avatar */
+.user-avatar {
+  width: 50px;
+  padding: 0.5rem;
+}
+
+/* User ID */
+.user-id {
+  font-family: monospace;
+  font-size: 0.8rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* User Username */
+.user-username {
+  font-weight: 600;
+}
+
+.username-text {
+  color: #1e40af;
+  font-family: monospace;
+  font-size: 0.85rem;
+  margin-right: 0.5rem;
+}
+
+.copy-username-btn {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: #2563eb;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-left: 0.5rem;
+}
+
+.copy-username-btn:hover {
+  background: #e2e8f0;
+  border-color: #3b82f6;
+}
+
+/* User Name Link */
+.user-name a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.user-name a:hover {
+  text-decoration: underline;
+}
+
+/* User Email */
+.user-email {
+  color: #475569;
+  font-size: 0.8rem;
+}
+
+/* Role Badges */
+.role-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.role-author {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.role-reviewer {
+  background: #e9d5ff;
+  color: #6b21a5;
+}
+
+.role-admin {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* Status Badges */
+.user-status span {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.status-approved {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.status-pending {
+  background: #fed7aa;
+  color: #9a3412;
+}
+
+.status-active {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+/* User Affiliation */
+.user-affiliation {
+  font-size: 0.8rem;
+  color: #64748b;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Actions Buttons */
+.user-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.view-btn {
+  background: #f1f5f9;
+  color: #2563eb;
+  border: 1px solid #e2e8f0;
+}
+
+.view-btn:hover {
+  background: #e2e8f0;
+  border-color: #3b82f6;
+}
+
+.approve-btn {
+  background: #10b981;
+  color: white;
+}
+
+.approve-btn:hover {
+  background: #059669;
+  transform: translateY(-1px);
+}
+
+/* Loading State */
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: #2563eb;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .usersTable {
+    font-size: 0.8rem;
+  }
+  
+  .usersTable th,
+  .usersTable td {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .usersListContainer {
+    padding: 0 1rem;
+    margin: 1rem auto;
+  }
+
+  .usersListHeader h1 {
+    font-size: 1.5rem;
+  }
+
+  .usersFilterControls {
+    flex-direction: column;
+  }
+
+  .usersSearchInput,
+  .usersSelect,
+  .usersCheckboxLabel {
+    width: 100%;
+  }
+
+  .usersCheckboxLabel {
+    justify-content: center;
+  }
+
+  .usersTable {
+    font-size: 0.7rem;
+  }
+
+  .usersTable th,
+  .usersTable td {
+    padding: 0.5rem;
+  }
+
+  .user-actions {
+    flex-direction: column;
+  }
+
+  .action-btn {
+    text-align: center;
+  }
+
+  .copy-username-btn {
+    display: block;
+    margin-top: 0.25rem;
+    margin-left: 0;
+  }
+
+  .username-text {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  .usersActiveFilter {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .usersFilterSection,
+  .usersActiveFilter,
+  .user-actions,
+  .copy-username-btn {
+    display: none;
+  }
+  
+  .usersListContainer {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .usersTable {
+    border: 1px solid #000;
+  }
+}
