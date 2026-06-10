@@ -1,0 +1,19 @@
+# Node.js
+node_modules/
+Frontend/node_modules/
+Frontend/frontend/node_modules/
+
+# build
+dist/
+build/
+
+# environment
+.env
+
+# Python (якщо є Django)
+__pycache__/
+*.pyc
+db.sqlite3
+
+# IDE
+.vscode/
