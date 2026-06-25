@@ -161,12 +161,10 @@ const handleSubmit = async (e) => {
   setLoading(true);
 
   try {
-    // 1. Оновлюємо текстові поля JSON
     const userUpdateData = { ...userForm };
-    delete userUpdateData.avatar; // видаляємо аватар, якщо є
-    await api.patch('/users/me/update/', userUpdateData); // JSON автоматично
+    delete userUpdateData.avatar; 
+    await api.patch('/users/me/update/', userUpdateData); 
 
-    // 2. Оновлюємо аватар, якщо він є або видаляємо
     if (avatarFile || removeAvatar) {
       const formData = new FormData();
       if (avatarFile) formData.append('avatar', avatarFile);
@@ -176,10 +174,8 @@ const handleSubmit = async (e) => {
       });
     }
 
-    // 3. Оновлюємо профіль (bio, соцмережі)
     await api.patch('/profiles/me/', profileForm);
 
-    // 4. Оновлюємо локальний user
     const updatedUser = await api.get('/users/me/');
     updateUser(updatedUser.data);
 

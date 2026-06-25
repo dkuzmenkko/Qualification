@@ -1,4 +1,4 @@
-/* Основний контейнер */
+ 
 .navUser,
 .navAdmin {
   display: flex;
@@ -6,15 +6,15 @@
   align-items: center;
   padding: 15px 40px;
 
-  /* ГОЛОВНЕ — без фону */
+   
   background: transparent;
   
-  /* щоб не було відчуття контейнера */
+   
   box-shadow: none;
   border: none;
 }
 
-/* Лінки */
+ 
 .navLink {
   text-decoration: none;
   color: #333;
@@ -26,12 +26,12 @@
   color: #1976d2;
 }
 
-/* Для адмінки білий текст */
+ 
 .navLinkWhite {
   color: white;
 }
 
-/* Текст */
+ 
 .textWhite {
   color: white;
 }
@@ -41,7 +41,7 @@
   font-size: 14px;
 }
 
-/* Кнопка */
+ 
 .btnDanger {
   background: none;
   border: none;
@@ -55,7 +55,7 @@
   color: #b71c1c;
 }
 
-/* Аватар */
+ 
 .navAvatar {
   width: 36px;
   height: 36px;
@@ -63,7 +63,7 @@
   object-fit: cover;
 }
 
-/* Flex допоміжні */
+ 
 .flexStart {
   display: flex;
   align-items: center;

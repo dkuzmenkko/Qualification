@@ -7,7 +7,6 @@ class Command(BaseCommand):
     help = 'Очищує застарілі коди верифікації'
 
     def handle(self, *args, **options):
-        # Видаляємо непідтверджених користувачів старше 24 годин
         cutoff = timezone.now() - timezone.timedelta(hours=24)
         old_users = User.objects.filter(
             email_verified=False,

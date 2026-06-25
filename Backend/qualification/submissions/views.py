@@ -1,4 +1,3 @@
-# submissions/views.py
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny, IsAuthenticated
 
@@ -126,10 +125,6 @@ class SubmissionListCreateView(generics.ListCreateAPIView):
         submission = serializer.save(author=user)
         UserActivityTracker.track_submission(user, conference)
         return submission
-
-
-
-# submissions/views.py
 
 class SubmissionDetailView(generics.RetrieveUpdateDestroyAPIView):
     

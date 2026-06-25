@@ -15,7 +15,7 @@
   display: inline-block;
 }
 
-/* Loading State */
+ 
 .loading {
   display: flex;
   justify-content: center;
@@ -28,7 +28,7 @@
   margin: 2rem;
 }
 
-/* Profile Header */
+ 
 .profileHeader {
   background: #f9fafb;
   border-radius: 1rem;
@@ -42,7 +42,7 @@
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
 }
 
-/* Avatar Section */
+ 
 .avatarWrapper {
   flex-shrink: 0;
   display: flex;
@@ -65,7 +65,7 @@
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
 }
 
-/* Profile Info */
+ 
 .profileInfo {
   flex: 1;
 }
@@ -88,7 +88,7 @@
   font-weight: 600;
 }
 
-/* Profile Actions Buttons */
+ 
 .profileActions {
   display: flex;
   gap: 1rem;
@@ -150,7 +150,7 @@
   cursor: not-allowed;
 }
 
-/* Profile Sections */
+ 
 .profileSection {
   background: #f9fafb;
   border-radius: 1rem;
@@ -203,7 +203,7 @@
   text-decoration: underline;
 }
 
-/* Statistics Subsections */
+ 
 .profileStatsSubsection {
   background: white;
   border-radius: 0.5rem;
@@ -240,7 +240,7 @@
   color: #4b5563;
 }
 
-/* Profile Views List */
+ 
 .profileViewsList {
   display: flex;
   flex-direction: column;
@@ -286,7 +286,7 @@
   font-size: 0.875rem;
 }
 
-/* Avatar Edit Link */
+ 
 .avatarEditLink {
   font-size: 13px;
   color: #dc2626;
@@ -302,7 +302,7 @@
   color: #fff;
 }
 
-/* Edit Link at Bottom */
+ 
 .profileEditLink {
   text-align: center;
   margin-top: 2rem;
@@ -324,7 +324,7 @@
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Design */
+ 
 @media (max-width: 768px) {
   .profileContainer {
     padding: 1rem;
@@ -395,7 +395,7 @@
 }
 
 
-/* Print Styles */
+ 
 @media print {
   .profileActions,
   .profileEditLink {
@@ -418,7 +418,7 @@
   }
 }
 
-/* Dark Mode Support */
+ 
 @media (prefers-color-scheme: dark) {
   .profileContainer h1 {
     color: #f3f4f6;
@@ -544,7 +544,7 @@
 }
 
 
-/* Profile.css - High Contrast White & Blue Theme */
+ 
 
 .publicProfileContainer {
   max-width: 1000px;
@@ -553,7 +553,7 @@
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-/* Profile Header */
+ 
 .profileHeader {
   display: flex;
   gap: 2rem;
@@ -601,7 +601,7 @@
   font-size: 0.85rem;
 }
 
-/* Profile Sections */
+ 
 .profileSection {
   margin-bottom: 2rem;
   padding: 1rem;
@@ -619,7 +619,7 @@
   border-bottom: 2px solid #3b82f6;
 }
 
-/* Stats Grid */
+ 
 .statsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -669,7 +669,7 @@
   color: #0f172a;
 }
 
-/* Submissions List */
+ 
 .submissionList {
   display: flex;
   flex-direction: column;
@@ -702,7 +702,7 @@
   color: #64748b;
 }
 
-/* Loading & Error States */
+ 
 .loading {
   text-align: center;
   padding: 3rem;
@@ -723,7 +723,7 @@
   max-width: 500px;
 }
 
-/* Responsive */
+ 
 @media (max-width: 768px) {
   .publicProfileContainer {
     padding: 0 1rem;

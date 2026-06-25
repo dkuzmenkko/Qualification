@@ -1,5 +1,3 @@
-// src/components/Announcements.js
-
 import React, { useState, useEffect } from 'react';
 import api from '../services/api';
 import { useNotification } from '../contexts/NotificationContext';

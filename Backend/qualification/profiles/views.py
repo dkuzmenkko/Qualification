@@ -136,8 +136,6 @@ def public_profile(request, user_id):
         'organized_conferences': organized_data,
         'reviewed_submissions': reviewed_data,
     }
- 
-    # Передаємо контекст запиту в серіалізатор
     serializer = PublicProfileSerializer(data, context={'request': request})
     return Response(serializer.data)
 

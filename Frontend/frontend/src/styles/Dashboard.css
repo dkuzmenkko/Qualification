@@ -1,6 +1,6 @@
-/* Dashboard.css - Сучасний дизайн */
+ 
 
-/* Main Container */
+ 
 .dashboardContainer {
   max-width: 1400px;
   margin: 0 auto;
@@ -8,7 +8,7 @@
 }
 
 
-/* Header Section */
+ 
 .dashboardHeader {
   background: #f9fafb;
   border-radius: 1rem;
@@ -37,7 +37,7 @@
   margin-top: 0.5rem;
 }
 
-/* Sections */
+ 
 .dashboardSection {
   
   background: #f9fafb;
@@ -59,7 +59,7 @@
   display: inline-block;
 }
 
-/* Stats Grid - 3 cards per row */
+ 
 .dashboardStatsGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -67,7 +67,7 @@
   margin-bottom: 1rem;
 }
 
-/* Responsive for stats grid */
+ 
 @media (max-width: 1024px) {
   .dashboardStatsGrid {
     grid-template-columns: repeat(2, 1fr);
@@ -105,7 +105,7 @@
   color: #1f232b;    
 }
 
-/* Stat Card Variants - only border colors without top line */
+ 
 .dashboardStatCardDefault {
   border-left: 4px solid #9ca3af4d;
 }
@@ -138,7 +138,7 @@
   border-left: 4px solid #90cdf4;
 }
 
-/* Action Buttons Container */
+ 
 .dashboardActionButtons,
 .dashboardActions {
   display: flex;
@@ -147,7 +147,7 @@
   flex-wrap: wrap;
 }
 
-/* Button Styles */
+ 
 .dashboardPrimaryButton,
 .dashboardSuccessButton,
 .dashboardSecondaryButton,
@@ -220,7 +220,7 @@
   background: #f9fafb;
 }
 
-/* Conference Cards Grid - 3 per row */
+ 
 .dashboardMyConferencesList {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -228,7 +228,7 @@
   margin-bottom: 1.5rem;
 }
 
-/* Responsive for conference cards */
+ 
 @media (max-width: 1024px) {
   .dashboardMyConferencesList {
     grid-template-columns: repeat(2, 1fr);
@@ -336,7 +336,7 @@
   justify-content: center;
 }
 
-/* Review Items */
+ 
 .dashboardReviewItem,
 .dashboardDraftItem,
 .dashboardInvitationItem,
@@ -383,7 +383,7 @@
   text-decoration: underline;
 }
 
-/* Categories List */
+ 
 .dashboardCategoriesList {
   margin-top: 1rem;
   padding: 1rem;
@@ -423,7 +423,7 @@
   text-decoration: underline;
 }
 
-/* View All Links */
+ 
 .dashboardViewAll,
 .dashboardViewAllLink {
   margin-top: 1.5rem;
@@ -444,7 +444,7 @@
   text-decoration: underline;
 }
 
-/* Recent items grid */
+ 
 .dashboardRecentItem {
   display: flex;
   justify-content: space-between;
@@ -453,7 +453,7 @@
   gap: 0.5rem;
 }
 
-/* Loading State */
+ 
 .loadingContainer {
   display: flex;
   justify-content: center;
@@ -472,7 +472,7 @@
 }
 
 
-/* Responsive Design */
+ 
 @media (max-width: 768px) {
   .dashboardContainer {
     padding: 1rem;
@@ -547,14 +547,14 @@
   }
 }
 
-/* Focus States */
+ 
 button:focus,
 a:focus {
   outline: 2px solid #667eea;
   outline-offset: 2px;
 }
 
-/* Print Styles */
+ 
 @media print {
   .dashboardActionButtons,
   .dashboardExportButtons,

@@ -1,5 +1,3 @@
-// src/pages/Archives.js
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import api from '../services/api';
@@ -40,19 +38,15 @@ const Archives = () => {
     const fetchArchives = async () => {
       setLoading(true);
       try {
-        // Отримуємо всі конференції
         const confResponse = await api.get('/conferences/');
         const today = new Date().toISOString().split('T')[0];
-        
-        // Фільтруємо минулі конференції (дата проведення < сьогодні)
+
         let past = confResponse.data.filter(conf => conf.event_date < today);
         
-        // Фільтрація за категорією
         if (filters.category) {
           past = past.filter(conf => conf.category === filters.category);
         }
         
-        // Фільтрація за пошуком
         if (filters.search) {
           const searchLower = filters.search.toLowerCase();
           past = past.filter(conf => 
@@ -61,18 +55,15 @@ const Archives = () => {
           );
         }
         
-        // Фільтрація за роком
         if (filters.year) {
           past = past.filter(conf => conf.event_date.startsWith(filters.year));
         }
         
         setPastConferences(past);
         
-        // Отримуємо роки для фільтрації
         const uniqueYears = [...new Set(confResponse.data.map(conf => conf.event_date.substring(0, 4)))];
         setYears(uniqueYears.sort().reverse());
         
-        // Отримуємо архівні тези (тільки ті, що is_archived = true)
         if (user) {
           const subsResponse = await api.get('/submissions/', {
             params: { archived: 'true' }

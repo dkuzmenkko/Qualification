@@ -1,5 +1,3 @@
-// src/pages/Auth.js
-
 import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
@@ -26,11 +24,9 @@ const Auth = () => {
   const [showCaptcha, setShowCaptcha] = useState(false);
   const [captchaAction, setCaptchaAction] = useState(null);
   
-  // Логін
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   
-  // Реєстрація
   const [registerStep, setRegisterStep] = useState('form');
   const [verificationCode, setVerificationCode] = useState('');
   const [verificationEmail, setVerificationEmail] = useState('');
@@ -49,7 +45,6 @@ const Auth = () => {
     confirm_password: '',
   });
   
-  // Верифікація email
   const [verifyEmail, setVerifyEmail] = useState('');
   const [verifyCode, setVerifyCode] = useState('');
   const [verifyStep, setVerifyStep] = useState('email');
@@ -77,7 +72,6 @@ const Auth = () => {
     }
   };
 
-  // ==================== ЛОГІН ====================
   const handleLoginSubmit = (e) => {
     e.preventDefault();
     if (!username || !password) {
@@ -119,7 +113,6 @@ const Auth = () => {
     }
   };
 
-  // ==================== РЕЄСТРАЦІЯ - КРОК 1: Відправка коду ====================
   const handleRegisterChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -173,7 +166,6 @@ const Auth = () => {
     }
   };
 
-  // ==================== РЕЄСТРАЦІЯ - КРОК 2: Перевірка коду та фінальна реєстрація ====================
   const handleVerifyCode = async (e) => {
     e.preventDefault();
     if (!verificationCode || verificationCode.length !== 6) {
@@ -181,14 +173,12 @@ const Auth = () => {
       return;
     }
     
-    // Зберігаємо дані для подальшого використання після капчі
     setTempRegisterData({
       formData,
       verificationEmail,
       verificationCode
     });
     
-    // Відкриваємо капчу для фінальної реєстрації
     setCaptchaAction('finalRegister');
     setShowCaptcha(true);
   };
@@ -196,13 +186,11 @@ const Auth = () => {
   const handleFinalRegisterWithCaptcha = async (captchaValue, captchaKey) => {
     setLoading(true);
     try {
-      // Спочатку верифікуємо код
       await api.post('/users/verify-code/', { 
         email: tempRegisterData.verificationEmail, 
         code: tempRegisterData.verificationCode 
       });
       
-      // Потім реєструємося з капчею
       const response = await register({
         ...tempRegisterData.formData,
         email: tempRegisterData.verificationEmail,
@@ -251,7 +239,6 @@ const Auth = () => {
     }
   };
 
-  // ==================== ВЕРИФІКАЦІЯ EMAIL (ОКРЕМА) ====================
   const handleSendEmailVerificationCode = async (captchaValue, captchaKey) => {
     setLoading(true);
     try {
@@ -312,7 +299,6 @@ const Auth = () => {
     }
   };
 
-  // ==================== ЗАГАЛЬНА ОБРОБКА КАПЧІ ====================
   const handleCaptchaVerify = async (captchaValue, captchaKey) => {
     if (captchaAction === 'login') {
       await handleLoginVerify(captchaValue, captchaKey);
@@ -325,7 +311,6 @@ const Auth = () => {
     }
   };
 
-  // ==================== UI КОМПОНЕНТИ ====================
   const getPanelTitle = () => {
     switch (mode) {
       case 'login':
@@ -699,7 +684,6 @@ const Auth = () => {
 
   return (
     <div className="auth-container">
-      {/* LEFT SIDE */}
       <div className="auth-left">
         <div className="auth-left-overlay"></div>
         <div className="auth-left-content">
@@ -714,7 +698,6 @@ const Auth = () => {
         </button>
       </div>
 
-      {/* RIGHT SIDE */}
       <div className="auth-right">
         <div className="auth-card">
           <div className="auth-header">

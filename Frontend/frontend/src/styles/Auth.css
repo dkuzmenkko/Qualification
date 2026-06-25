@@ -4,9 +4,6 @@
   font-weight: bold;
 }
 
-/* body{
-  font-family: 'HeroFont', sans-serif;
-} */
 
 .auth-container {
   display: flex;
@@ -15,7 +12,7 @@
   background: white; 
 }
 
-/* LEFT SIDE */
+ 
 .auth-left {
   background: url('../assets/BackLog.jpg') center/cover no-repeat;
   width: 50%;
@@ -54,7 +51,7 @@
   font-size:28px;
 }
 
-/* RIGHT SIDE */
+ 
 .auth-right {
   width: 50%;
   display: flex;
@@ -69,7 +66,7 @@
   padding: 40px;
   border-radius: 16px;
 }
-/* HEADER */
+ 
 .auth-header h2 {
   color: #222;
 }
@@ -78,7 +75,7 @@
   color: #666;
 }
 
-/* INPUTS */
+ 
 .auth-input,
 .auth-select {
   width: 100%;
@@ -94,7 +91,7 @@
 .auth-input::placeholder {
   color: #aaa;
 }
-/* BUTTON */
+ 
 .auth-button-primary {
   width: 100%;
   padding: 12px;
@@ -111,7 +108,7 @@
   background: #6a4ee6;
 }
 
-/* LINKS */
+ 
 .auth-link {
   color: #666;
 }
@@ -120,7 +117,7 @@
   color: #000;
 }
 
-/* ROWS */
+ 
 .auth-row {
   display: flex;
   gap: 10px;
@@ -142,7 +139,7 @@
   font-size: 15px;
   cursor: pointer;
   transition: 0.3s;
-  /* font-family: 'HeroFont', sans-serif; */
+   
   z-index: 10; 
 }
 
@@ -155,7 +152,7 @@
   color: #fcfbfb;
 }
 
-/* Заголовки та текст */
+ 
 .auth-title {
   font-family: 'HeroFont', sans-serif;
   font-size: 42px;
@@ -189,7 +186,7 @@
   border-bottom-color: #7b5cff;
 }
 
-/* Кнопка Увійти чорна */
+ 
 .auth-button-primary {
   width: 100%;
   padding: 12px;
@@ -208,7 +205,7 @@
   background: #000;
 }
 
-/* Кнопка “Створити новий акаунт” маленька підписом */
+ 
 .auth-link-text {
   display: block;
   margin: 12px auto 0 auto;
@@ -243,7 +240,7 @@
   margin-bottom: 20px;
 }
 
-/* Стилізація скролбару */
+ 
 .auth-scrollable-fields::-webkit-scrollbar {
   width: 6px;
 }
@@ -262,13 +259,13 @@
   background: #aaa;
 }
 
-/* Для Firefox */
+ 
 .auth-scrollable-fields {
   scrollbar-width: thin;
   scrollbar-color: #ccc #f1f1f1;
 }
 
-/* Статичний футер з кнопкою */
+ 
 .auth-sticky-footer {
   flex-shrink: 0;
   padding-top: 15px;
@@ -276,7 +273,7 @@
   background: white;
 }
 
-/* Адаптація для мобільних пристроїв */
+ 
 @media (max-width: 768px) {
   .auth-register-wrapper {
     max-height: calc(100vh - 160px);
@@ -288,9 +285,9 @@
 }
 
 
-/* Додати до Auth.css - покращені стилі для категорій */
+ 
 
-/* Контейнер для чекбоксів категорій */
+ 
 .auth-checkbox-group {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
@@ -305,7 +302,7 @@
   border: 1px solid #e9ecef;
 }
 
-/* Стилізація скролбару для списку категорій */
+ 
 .auth-checkbox-group::-webkit-scrollbar {
   width: 4px;
 }
@@ -321,7 +318,7 @@
 }
 
 
-/* Альтернативний варіант - як chips (більш сучасний) */
+ 
 .auth-chips-group {
   display: flex;
   flex-wrap: wrap;
@@ -357,8 +354,8 @@
 
 .auth-field .auth-hint {
   display: block;
-  margin-top: 4px; /* відступ від поля / лейблу */
-  margin-bottom: 16px; /* відступ до наступного поля */
+  margin-top: 4px;  
+  margin-bottom: 16px;  
   font-size: 13px;
   color: #666;
 }

@@ -10,14 +10,13 @@ const Dashboard = () => {
   const [dashboardData, setDashboardData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [myConferences, setMyConferences] = useState([]);
-  const [mySubmissions, setMySubmissions] = useState([]); // Додано для тез автора
+  const [mySubmissions, setMySubmissions] = useState([]);
 
   useEffect(() => {
     const fetchDashboard = async () => {
       try {
         let response;
         
-        // Отримуємо дані залежно від ролі
         if (user.role === 'AUTHOR') {
           response = await api.get('/submissions/dashboard/author/');
         } else if (user.role === 'REVIEWER') {
@@ -31,13 +30,10 @@ const Dashboard = () => {
         }
         setDashboardData(response.data);
         
-        // Отримуємо конференції, де користувач є організатором
-        // Це стосується як REVIEWER, так і ORGANIZER
         const confsRes = await api.get('/conferences/');
         const myConfs = confsRes.data.filter(conf => conf.organizer?.id === user.id);
         setMyConferences(myConfs);
         
-        // Отримуємо тези, де користувач є автором (для рецензентів, які також подають тези)
         if (user.role === 'REVIEWER') {
           const subsRes = await api.get('/submissions/');
           const authorSubs = subsRes.data.filter(sub => sub.author === user.id);
@@ -97,7 +93,6 @@ const Dashboard = () => {
   if (loading) return <div>Завантаження...</div>;
   if (!dashboardData) return <div>Помилка завантаження даних</div>;
 
-  // Дашборд для автора
   if (user.role === 'AUTHOR') {
     return (
       <div className="dashboardContainer">
@@ -164,7 +159,6 @@ const Dashboard = () => {
     );
   }
   
-  // Дашборд для рецензента (з можливістю бачити і рецензії, і свої тези, і конференції)
   if (user.role === 'REVIEWER') {
     return (
       <div className="dashboardContainer">
@@ -175,7 +169,6 @@ const Dashboard = () => {
           </p>
         </div>
         
-        {/* Секція статистики рецензій */}
         <div className="dashboardSection">
           <h2>Статистика рецензій</h2>
           <div className="dashboardStatsGrid">
@@ -211,7 +204,6 @@ const Dashboard = () => {
           </div>
         </div>
         
-        {/* Секція моїх тез (як автор) */}
         {mySubmissions.length > 0 && (
           <div className="dashboardSection">
             <h2>Мої подані тези (як автор)</h2>
@@ -243,7 +235,6 @@ const Dashboard = () => {
           </div>
         )}
         
-        {/* Секція моїх конференцій (як організатор) */}
         {myConferences.length > 0 && (
           <div className="dashboardSection">
             <h2>Мої конференції (як організатор)</h2>
@@ -298,7 +289,6 @@ const Dashboard = () => {
           </div>
         )}
         
-        {/* Запрошення */}
         {dashboardData.invitations && dashboardData.invitations.length > 0 && (
           <div className="dashboardSection">
             <h2>Запрошення</h2>
@@ -311,7 +301,6 @@ const Dashboard = () => {
           </div>
         )}
         
-        {/* Кнопка створення конференції */}
         {user.is_approved && (
           <div className="dashboardActions">
             <Link to="/conferences/create">
@@ -323,7 +312,6 @@ const Dashboard = () => {
     );
   }
   
-  // Дашборд для організатора
   if (user.role === 'ORGANIZER') {
     return (
       <div className="dashboardContainer">

@@ -1,4 +1,4 @@
-/* Загальні стилі для навігації */
+ 
 .navuser, .navadmin {
   width: 100%;
   padding: 15px 30px;
@@ -10,7 +10,7 @@
   border-bottom: 1px solid #ddd; 
 }
 
-/* Лінки */
+ 
 .navlink {
   text-decoration: none;
   color: #333;
@@ -40,7 +40,7 @@
   font-weight: bold;
 }
 
-/* Кнопка "Подати тезу" - стилізована як звичайне посилання */
+ 
 .submit-button-nav {
   background: none;
   border: none;
@@ -58,7 +58,7 @@
   color: #002f61;
 }
 
-/* Кнопки */
+ 
 .btn {
   padding: 7px 20px;
   border: none;
@@ -74,7 +74,7 @@
   color: #470000;
 }
 
-/* Флекс контейнери */
+ 
 .flexstart {
   display: flex;
   align-items: center;
@@ -92,7 +92,7 @@
   flex-wrap: wrap;
 }
 
-/* Аватар */
+ 
 .avatarcontainer {
   position: relative;
   width: 40px;
@@ -101,7 +101,7 @@
   overflow: hidden;
 }
 
-/* Спінер при завантаженні аватара */
+ 
 .avatarplaceholder {
   width: 100%;
   height: 100%;
@@ -125,7 +125,7 @@
   100% { transform: rotate(360deg); }
 }
 
-/* Текст */
+ 
 .textwhite {
   color: #fff;
 }
@@ -140,7 +140,7 @@
   font-size: 18px;
 }
 
-/* Стилі для адмін навігації */
+ 
 .navadmin {
   background-color: #343a40;
   color: #fff;
@@ -254,7 +254,7 @@
   margin-left: 10px;
 }
 
-/* Стилі для випадаючого меню сповіщень */
+ 
 .dropdown-menu.notifications-dropdown {
   position: absolute;
   top: 50px;
@@ -398,7 +398,7 @@
   background-color: #7c0000;
 }
 
-/* Адаптація для мобільних пристроїв */
+ 
 @media (max-width: 768px) {
   .navuser, .navadmin {
     padding: 10px 15px;

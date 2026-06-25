@@ -1,5 +1,3 @@
-// src/components/Avatar.js
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import defaultAvatar from '../assets/default-avatar.png';

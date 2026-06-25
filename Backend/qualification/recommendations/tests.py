@@ -1,4 +1,3 @@
-# fixtures/test_data.py
 
 import os
 import django
@@ -117,8 +116,6 @@ def create_test_data():
         view_count=3,
         last_viewed=timezone.now()
     )
-    
-    # Дії користувача
     UserAction.objects.create(
         user=author,
         conference=conferences[0],

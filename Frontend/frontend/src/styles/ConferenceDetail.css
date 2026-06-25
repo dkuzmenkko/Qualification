@@ -1,4 +1,4 @@
-/* ConferenceDetail.css - Minimalist Design with Black Text */
+ 
 
 .conferenceDetailContainer {
   max-width: 1000px;
@@ -7,7 +7,7 @@
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-/* Back Link */
+ 
 .conferenceDetailBackLink {
   margin-bottom: 1.5rem;
 }
@@ -25,7 +25,7 @@
   text-decoration: underline;
 }
 
-/* Header */
+ 
 .conferenceDetailHeader {
   display: flex;
   justify-content: space-between;
@@ -44,7 +44,7 @@
   margin: 0;
 }
 
-/* Warning */
+ 
 .conferenceDetailCannotSubmit {
   background: #fef2f2;
   padding: 0.75rem 1rem;
@@ -55,7 +55,7 @@
   border-left: 3px solid #ef4444;
 }
 
-/* ===== INFO GRID ===== */
+ 
 .conferenceDetailInfoGrid {
   margin-bottom: 1.5rem;
 }
@@ -91,7 +91,7 @@
   flex-wrap: wrap;
 }
 
-/* Fix for organizer alignment */
+ 
 .organizer-info {
   align-items: center;
 }
@@ -102,7 +102,7 @@
   gap: 0.5rem;
 }
 
-/* Type Badge */
+ 
 .conference-type-badge {
   display: inline-block;
   padding: 0.25rem 0.75rem;
@@ -149,7 +149,7 @@
   text-decoration: underline;
 }
 
-/* Institution & Address */
+ 
 .conferenceDetailInstitution,
 .conferenceDetailAddress {
   padding: 0.75rem 0;
@@ -172,7 +172,7 @@
   font-size: 0.95rem;
 }
 
-/* ===== REVIEWERS ===== */
+ 
 .conferenceDetailReviewersSection {
   margin: 1.5rem 0;
   padding-top: 1rem;
@@ -218,7 +218,7 @@
   color: #64748b;
 }
 
-/* ===== DESCRIPTION ===== */
+ 
 .conferenceDetailDescription {
   margin: 1.5rem 0;
 }
@@ -240,7 +240,7 @@
   border-radius: 0.5rem;
 }
 
-/* ===== FILES ===== */
+ 
 .conferenceDetailFilesSection {
   margin: 1.5rem 0;
 }
@@ -297,7 +297,7 @@
   color: #64748b;
 }
 
-/* ===== SUBMIT BUTTON ===== */
+ 
 .conferenceDetailSubmitSection {
   margin: 1.5rem 0;
   text-align: center;
@@ -319,7 +319,7 @@
   background: #1d4ed8;
 }
 
-/* ===== ORGANIZER SECTION ===== */
+ 
 .conferenceDetailOrganizerSection {
   margin: 1.5rem 0;
   padding-top: 1rem;
@@ -473,7 +473,7 @@
   margin-bottom: 1rem;
 }
 
-/* ===== ADMIN SECTION ===== */
+ 
 .conferenceDetailAdminSection {
   margin: 1.5rem 0;
   padding-top: 1rem;
@@ -488,7 +488,7 @@
   letter-spacing: 0.5px;
 }
 
-/* ===== INVITATION ALERT ===== */
+ 
 .conferenceDetailInvitationAlert {
   background: #eff6ff;
   padding: 0.75rem 1rem;
@@ -522,7 +522,7 @@
   background: #2563eb;
 }
 
-/* ===== SUBMISSIONS ===== */
+ 
 .conferenceDetailSubmissionsSection {
   margin: 1.5rem 0;
 }
@@ -590,7 +590,7 @@
   color: #64748b;
 }
 
-/* ===== SIMILAR ===== */
+ 
 .conferenceDetailSimilarSection {
   margin: 1.5rem 0;
 }
@@ -639,7 +639,7 @@
   margin: 0.25rem 0 0 0;
 }
 
-/* ===== LOADING ===== */
+ 
 .loading {
   text-align: center;
   padding: 3rem;
@@ -648,7 +648,7 @@
   font-size: 1rem;
 }
 
-/* ===== RESPONSIVE ===== */
+ 
 @media (max-width: 768px) {
   .conferenceDetailContainer {
     padding: 0 1rem;
@@ -698,7 +698,7 @@
   }
 }
 
-/* Announcements Component Styles */
+ 
 
 .announcements-section {
   margin-top: 1.5rem;

@@ -1,4 +1,4 @@
-/* Discussions.css - High Contrast White & Blue Theme */
+ 
 
 .discussionsContainer {
   max-width: 1200px;
@@ -23,7 +23,7 @@
   font-size: 1rem;
 }
 
-/* Filter Section - з контрастним фоном */
+ 
 .discussionsFilters {
   background: #f8fafc;
   border-radius: 1rem;
@@ -76,7 +76,7 @@
   background: #f0f9ff;
 }
 
-/* Cards - з чіткими межами */
+ 
 .discussionsList {
   display: flex;
   flex-direction: column;
@@ -194,7 +194,7 @@
 
 
 
-/* Empty State */
+ 
 .discussionsEmpty {
   text-align: center;
   padding: 4rem 2rem;
@@ -214,7 +214,7 @@
   color: #64748b;
 }
 
-/* Loading State */
+ 
 .discussionsContainer > div:first-child:contains("Завантаження") {
   text-align: center;
   padding: 3rem;
@@ -255,7 +255,7 @@
   }
 }
 
-/* DiscussionDetail.css - High Contrast White & Blue Theme */
+ 
 
 .discussionDetailContainer {
   max-width: 900px;
@@ -264,7 +264,7 @@
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-/* Back Link */
+ 
 .discussionDetailBackLink {
   margin-bottom: 1.5rem;
 }
@@ -285,7 +285,7 @@
   text-decoration: underline;
 }
 
-/* Title */
+ 
 .discussionDetailContainer h1 {
   font-size: 1.75rem;
   font-weight: 700;
@@ -298,7 +298,7 @@
   line-height: 1.3;
 }
 
-/* Info Card */
+ 
 .discussionDetailInfo {
   background: #f8fafc;
   border: 1px solid #e2e8f0;
@@ -350,7 +350,7 @@
   font-size: 0.75rem;
 }
 
-/* Abstract Section */
+ 
 .discussionDetailAbstract {
   background: white;
   border: 1px solid #e2e8f0;
@@ -377,7 +377,7 @@
   color: #334155;
 }
 
-/* Stats */
+ 
 .discussionDetailStats {
   display: flex;
   gap: 1.5rem;
@@ -394,7 +394,7 @@
   font-weight: 500;
 }
 
-/* Top Comments */
+ 
 .discussionTopComments {
   background: #f8fafc;
   border: 1px solid #e2e8f0;
@@ -433,7 +433,7 @@
   color: #475569;
 }
 
-/* Sort Section */
+ 
 .discussionDetailSort {
   display: flex;
   align-items: center;
@@ -471,7 +471,7 @@
   border-color: #3b82f6;
 }
 
-/* Add Comment Section */
+ 
 .discussionAddComment {
   background: #f8fafc;
   border: 1px solid #e2e8f0;
@@ -555,7 +555,7 @@
   cursor: not-allowed;
 }
 
-/* Comments Section */
+ 
 .discussionCommentsSection {
   margin-top: 1rem;
 }
@@ -567,7 +567,7 @@
   color: #0f172a;
 }
 
-/* Comment Card */
+ 
 .discussionComment {
   margin-bottom: 1rem;
 }
@@ -591,7 +591,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
-/* Comment Header */
+ 
 .discussionCommentHeader {
   display: flex;
   align-items: center;
@@ -639,7 +639,7 @@
   border-radius: 2rem;
 }
 
-/* Comment Text */
+ 
 .discussionCommentText {
   margin: 0.75rem 0;
   font-size: 0.875rem;
@@ -654,7 +654,7 @@
   font-style: italic;
 }
 
-/* Comment Actions */
+ 
 .discussionCommentActions {
   display: flex;
   gap: 0.5rem;
@@ -717,7 +717,7 @@
   background: #fee2e2 !important;
 }
 
-/* Edit Mode */
+ 
 .discussionEditTextarea {
   width: 100%;
   padding: 0.5rem;
@@ -757,7 +757,7 @@
   color: #334155;
 }
 
-/* Empty State */
+ 
 .discussionCommentsSection > p {
   text-align: center;
   padding: 2rem;
@@ -767,7 +767,7 @@
   font-size: 0.875rem;
 }
 
-/* Loading State */
+ 
 .discussionDetailContainer > div:first-child:contains("Завантаження") {
   text-align: center;
   padding: 3rem;
@@ -775,13 +775,13 @@
   font-weight: 500;
 }
 
-/* Focus States */
+ 
 *:focus-visible {
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
 }
 
-/* Responsive */
+ 
 @media (max-width: 768px) {
   .discussionDetailContainer {
     padding: 0 1rem;

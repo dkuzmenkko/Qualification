@@ -1,5 +1,3 @@
-// src/App.js
-
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
@@ -32,20 +30,19 @@ import Discussions from './pages/Discussions';
 import DiscussionDetail from './pages/DiscussionDetail';
 import Auth from './pages/Auth';
 
-// Layout з навігацією для захищених сторінок
 const LayoutWithNav = () => (
   <>
     <Navigation />
     <div>
-      <Outlet /> {/* Важливо! Тут будуть рендеритися дочірні маршрути */}
+      <Outlet /> { }
     </div>
   </>
 );
 
-// Layout без навігації для auth сторінок
+
 const LayoutWithoutNav = () => (
   <div>
-    <Outlet /> {/* Важливо! Тут будуть рендеритися дочірні маршрути */}
+    <Outlet /> { }
   </div>
 );
 
@@ -55,14 +52,14 @@ function App() {
       <AuthProvider>
         <NotificationProvider>
           <Routes>
-            {/* Auth сторінки БЕЗ навігації */}
+     
             <Route element={<LayoutWithoutNav />}>
               <Route path="/login" element={<Auth />} />
               <Route path="/register" element={<Auth />} />
               <Route path="/verify-email" element={<Auth />} />
             </Route>
 
-            {/* Публічні маршрути З навігацією */}
+       
             <Route element={<LayoutWithNav />}>
               <Route path="/" element={<Home />} />
               <Route path="/conferences" element={<Conferences />} />
@@ -72,7 +69,7 @@ function App() {
               <Route path="/search" element={<Search />} />
               <Route path="/profile/:userId" element={<PublicProfile />} />
               
-              {/* Захищені маршрути - тільки для авторизованих */}
+             
               <Route path="/profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
               <Route path="/profile/edit" element={<PrivateRoute><ProfileEdit /></PrivateRoute>} />
               <Route path="/submissions" element={<PrivateRoute><Submissions /></PrivateRoute>} />
@@ -84,12 +81,11 @@ function App() {
               <Route path="/exports" element={<PrivateRoute><Exports /></PrivateRoute>} />
               <Route path="/archives" element={<Archives />} />
               <Route path="/users" element={<PrivateRoute><UsersList /></PrivateRoute>} />
-              {/* Рольові маршрути */}
+             
               <Route path="/conferences/create" element={<RoleBasedRoute allowedRoles={['REVIEWER', 'ADMIN']}><ConferenceCreate /></RoleBasedRoute>} />
               <Route path="/my-conferences" element={<RoleBasedRoute allowedRoles={['REVIEWER', 'ORGANIZER']}><MyConferences /></RoleBasedRoute>} />
               
-              
-              {/* Адмін маршрути */}
+          
               <Route path="/admin-dashboard" element={<AdminRoute><AdminDashboard /></AdminRoute>} />
             </Route>
           </Routes>

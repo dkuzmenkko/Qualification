@@ -1,5 +1,3 @@
-// src/pages/ConferenceCreate.js
-
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import api from '../services/api';

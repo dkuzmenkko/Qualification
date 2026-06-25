@@ -1,4 +1,3 @@
-# submissions/serializers.py
 
 from django.utils import timezone
 from rest_framework import serializers
@@ -33,9 +32,6 @@ class VersionHistorySerializer(serializers.ModelSerializer):
             'previous_version_version',
         ]
         read_only_fields = ['created_at']
-
-
-# submissions/serializers.py
 
 class SubmissionSerializer(serializers.ModelSerializer):
     author_username = serializers.CharField(source='author.username', read_only=True)
@@ -155,8 +151,8 @@ class SubmissionSerializer(serializers.ModelSerializer):
 class SubmissionCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Submission
-        fields = ['id', 'title', 'abstract', 'file', 'conference']  # Додаємо id в fields
-        read_only_fields = ['id']  # ID тільки для читання
+        fields = ['id', 'title', 'abstract', 'file', 'conference']  
+        read_only_fields = ['id']
  
     def validate(self, data):
         conference = data.get('conference')
@@ -165,8 +161,6 @@ class SubmissionCreateSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError(
                 "Дедлайн подачі тез вже минув"
             )
-        
-        # Перевірка типу файлу
         file = data.get('file')
         if file:
             import os
@@ -180,8 +174,6 @@ class SubmissionCreateSerializer(serializers.ModelSerializer):
                 raise serializers.ValidationError({
                     'file': "Розмір файлу не повинен перевищувати 10MB"
                 })
-        
-        # Перевірка назви
         title = data.get('title', '').strip()
         if not title:
             raise serializers.ValidationError({
@@ -213,8 +205,6 @@ class SubmissionUpdateSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError(
                 "Не можна редагувати тезу після її відправлення на рецензію"
             )
-        
-        # Перевірка файлу
         file = data.get('file')
         if file:
             allowed_extensions = ['.pdf', '.doc', '.docx']

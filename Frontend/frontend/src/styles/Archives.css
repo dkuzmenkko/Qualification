@@ -1,5 +1,3 @@
-/* Archives.css - Modern High Contrast White & Blue Theme */
-
 .archivesContainer {
   max-width: 1200px;
   margin: 2rem auto;
@@ -18,7 +16,7 @@
   letter-spacing: -0.02em;
 }
 
-/* Tabs Navigation */
+ 
 .archivesTabs {
   display: flex;
   gap: 0.5rem;
@@ -38,11 +36,6 @@
   position: relative;
   border-radius: 0.5rem 0.5rem 0 0;
 }
-/* 
-.archivesTab:hover {
-  color: #2563eb;
-  background: #f1f5f9;
-} */
 
 .archivesTab.active {
   color: #2563eb;
@@ -60,7 +53,7 @@
   border-radius: 3px 3px 0 0;
 }
 
-/* Filters Section */
+ 
 .archivesFilters {
   background: #f8fafc;
   border-radius: 1rem;
@@ -134,7 +127,7 @@
   box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
 }
 
-/* Empty State */
+ 
 .archivesEmpty {
   text-align: center;
   padding: 4rem 2rem;
@@ -149,7 +142,7 @@
   font-size: 1rem;
 }
 
-/* Conferences List */
+ 
 .archivesConferencesList,
 .archivesSubmissionsList {
   display: flex;
@@ -157,7 +150,7 @@
   gap: 1.25rem;
 }
 
-/* Conference Card */
+ 
 .archivesConferenceCard,
 .archivesSubmissionCard {
   background: white;
@@ -215,7 +208,7 @@
   border: 1px solid #3b82f6;
 }
 
-/* Info Grid */
+ 
 .archivesConferenceInfo,
 .archivesSubmissionInfo {
   display: grid;
@@ -242,7 +235,7 @@
   display: inline-block;
 }
 
-/* Stats Section */
+ 
 .archivesConferenceStats {
   display: flex;
   gap: 1rem;
@@ -261,7 +254,7 @@
   gap: 0.25rem;
 }
 
-/* View Link Button */
+ 
 .archivesViewLink {
   display: inline-flex;
   align-items: center;
@@ -276,13 +269,8 @@
   margin-top: 0.5rem;
 }
 
-/* .archivesViewLink:hover {
-  gap: 0.75rem;
-  background: #1d4ed8;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-} */
 
-/* Status Badge for Submissions (if needed) */
+ 
 .archivesSubmissionStatus {
   display: inline-block;
   padding: 0.25rem 0.75rem;
@@ -297,7 +285,7 @@
   border: 1px solid #10b981;
 }
 
-/* Loading State */
+ 
 .loading {
   text-align: center;
   padding: 3rem;
@@ -307,13 +295,13 @@
 }
 
 
-/* Focus States */
+ 
 *:focus-visible {
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
 }
 
-/* Responsive Design */
+ 
 @media (max-width: 768px) {
   .archivesContainer {
     padding: 0 1rem;
@@ -370,7 +358,7 @@
   }
 }
 
-/* Additional improvements for better readability */
+ 
 .archivesConferenceInfo p,
 .archivesSubmissionInfo p {
   line-height: 1.5;

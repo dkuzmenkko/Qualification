@@ -1,4 +1,3 @@
-# users/urls.py
 
 from django.urls import path
 from .views import (
@@ -20,9 +19,7 @@ from .views import (
 urlpatterns = [
     path('register/', register_api),
     path('login/', login_api),
-    
-    # Спочатку більш специфічні маршрути
-    path('me/avatar/delete/', delete_avatar),  # Цей має бути перед me/update/ і me/
+    path('me/avatar/delete/', delete_avatar),  
     path('me/update/', update_profile),
     path('me/', current_user),
     

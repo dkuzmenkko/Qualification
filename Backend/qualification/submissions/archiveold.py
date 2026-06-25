@@ -1,4 +1,3 @@
-# submissions/management/commands/archive_old_submissions.py
 
 import os
 from django.core.management.base import BaseCommand
@@ -12,8 +11,6 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         self.stdout.write('Починаємо архівацію старих тез...')
-        
-        # Знаходимо тези для архівації
         one_year_ago = timezone.now() - timezone.timedelta(days=365)
         submissions_to_archive = Submission.objects.filter(
             is_archived=False,
@@ -28,8 +25,6 @@ class Command(BaseCommand):
         for submission in submissions_to_archive:
             submission.archive()
             archived_count += 1
-            
-            # Сповіщаємо автора
             create_notification(
                 submission.author,
                 f"Вашу тезу '{submission.title}' переміщено до архіву (через 1 рік після публікації)",

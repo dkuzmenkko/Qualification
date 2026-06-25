@@ -89,14 +89,9 @@ class RegisterSerializer(serializers.ModelSerializer):
             if interest not in valid_categories:
                 raise serializers.ValidationError({"interests": f"Невірна категорія: {interest}"})
         
-        # Перевірку на існування email ВИДАЛЕНО, тому що register_api сам перевіряє
-        # і дозволяє оновлювати тимчасового користувача
-        
         return data
 
     def create(self, validated_data):
-        # Цей метод не використовується, оскільки register_api оновлює існуючого користувача
-        # Але залишаємо для безпеки
         validated_data.pop('confirm_password', None)
         validated_data.pop('captcha_key', None)
         validated_data.pop('captcha_response', None)

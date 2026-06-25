@@ -1,4 +1,4 @@
-/* UsersList.css - High Contrast White & Blue Theme */
+ 
 
 .usersListContainer {
   max-width: 1400px;
@@ -7,7 +7,7 @@
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-/* Header */
+ 
 .usersListHeader {
   display: flex;
   justify-content: space-between;
@@ -39,7 +39,7 @@
   color: #1e40af;
 }
 
-/* Filter Section */
+ 
 .usersFilterSection {
   background: #f8fafc;
   border-radius: 1rem;
@@ -76,8 +76,6 @@
   background: white;
   transition: all 0.2s;
 }
-
-
 
 .usersSearchInput:focus {
   border-color: #2563eb;
@@ -131,7 +129,7 @@
   accent-color: #2563eb;
 }
 
-/* Active Filter Banner */
+ 
 .usersActiveFilter {
   background: #dbeafe;
   padding: 0.75rem 1rem;
@@ -168,7 +166,7 @@
   box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
 }
 
-/* Empty State */
+ 
 .usersEmptyState {
   text-align: center;
   padding: 4rem 2rem;
@@ -200,7 +198,7 @@
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 
-/* Table */
+ 
 .usersList {
   overflow-x: auto;
   border-radius: 1rem;
@@ -238,13 +236,13 @@
   background: #f8fafc;
 }
 
-/* User Avatar */
+ 
 .user-avatar {
   width: 50px;
   padding: 0.5rem;
 }
 
-/* User ID */
+ 
 .user-id {
   font-family: monospace;
   font-size: 0.8rem;
@@ -252,7 +250,7 @@
   font-weight: 500;
 }
 
-/* User Username */
+ 
 .user-username {
   font-weight: 600;
 }
@@ -282,7 +280,7 @@
   border-color: #3b82f6;
 }
 
-/* User Name Link */
+ 
 .user-name a {
   color: #2563eb;
   text-decoration: none;
@@ -293,13 +291,13 @@
   text-decoration: underline;
 }
 
-/* User Email */
+ 
 .user-email {
   color: #475569;
   font-size: 0.8rem;
 }
 
-/* Role Badges */
+ 
 .role-badge {
   display: inline-block;
   padding: 0.25rem 0.75rem;
@@ -323,7 +321,7 @@
   color: #b91c1c;
 }
 
-/* Status Badges */
+ 
 .user-status span {
   display: inline-block;
   padding: 0.25rem 0.75rem;
@@ -347,7 +345,7 @@
   color: #1e40af;
 }
 
-/* User Affiliation */
+ 
 .user-affiliation {
   font-size: 0.8rem;
   color: #64748b;
@@ -357,7 +355,7 @@
   text-overflow: ellipsis;
 }
 
-/* Actions Buttons */
+ 
 .user-actions {
   display: flex;
   gap: 0.5rem;
@@ -397,7 +395,7 @@
   transform: translateY(-1px);
 }
 
-/* Loading State */
+ 
 .loading {
   text-align: center;
   padding: 3rem;
@@ -406,7 +404,7 @@
   font-size: 1rem;
 }
 
-/* Responsive Design */
+ 
 @media (max-width: 1024px) {
   .usersTable {
     font-size: 0.8rem;
@@ -476,7 +474,7 @@
   }
 }
 
-/* Print Styles */
+ 
 @media print {
   .usersFilterSection,
   .usersActiveFilter,

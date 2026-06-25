@@ -1,10 +1,9 @@
-# exports/views.py
 
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.exceptions import PermissionDenied
 from rest_framework.response import Response
-from django.http import HttpResponse  # Додаємо HttpResponse
+from django.http import HttpResponse 
 from django.shortcuts import get_object_or_404
 from django.utils import timezone
 from conferences.models import Conference
@@ -21,32 +20,23 @@ def export_participants(request, conference_id):
     """
     conference = get_object_or_404(Conference, id=conference_id)
     user = request.user
-    
-    # Перевірка прав: тільки організатор або адмін
     if conference.organizer != user and user.role != 'ADMIN':
         raise PermissionDenied("Тільки організатор може експортувати учасників")
     
     try:
-        # Отримуємо всі тези конференції
         submissions = Submission.objects.filter(
             conference=conference,
             is_latest=True
         ).select_related('author', 'reviewer').order_by('-created_at')
         
         print(f"Exporting participants for conference {conference.id}, found {submissions.count()} submissions")
-        
-        # Генеруємо Excel файл
         excel_file = ExcelExporter.export_participants(conference, submissions)
-        
-        # Зберігаємо історію експорту
         ExportHistory.objects.create(
             user=user,
             conference=conference,
             export_type='PARTICIPANTS',
             file_name=f"participants_{conference.conference_id}_{timezone.now().strftime('%Y%m%d_%H%M%S')}.xlsx"
         )
-        
-        # Відправляємо файл - використовуємо HttpResponse
         response = HttpResponse(
             excel_file.getvalue(),
             content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
@@ -73,32 +63,23 @@ def export_submissions_list(request, conference_id):
     """
     conference = get_object_or_404(Conference, id=conference_id)
     user = request.user
-    
-    # Перевірка прав: тільки організатор або адмін
     if conference.organizer != user and user.role != 'ADMIN':
         raise PermissionDenied("Тільки організатор може експортувати список тез")
     
     try:
-        # Отримуємо всі тези конференції
         submissions = Submission.objects.filter(
             conference=conference,
             is_latest=True
         ).select_related('author', 'reviewer').order_by('-created_at')
         
         print(f"Exporting submissions for conference {conference.id}, found {submissions.count()} submissions")
-        
-        # Генеруємо Excel файл
         excel_file = ExcelExporter.export_submissions_list(conference, submissions)
-        
-        # Зберігаємо історію експорту
         ExportHistory.objects.create(
             user=user,
             conference=conference,
             export_type='SUBMISSIONS',
             file_name=f"submissions_{conference.conference_id}_{timezone.now().strftime('%Y%m%d_%H%M%S')}.xlsx"
         )
-        
-        # Відправляємо файл - використовуємо HttpResponse
         response = HttpResponse(
             excel_file.getvalue(),
             content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
@@ -125,8 +106,6 @@ def export_submission_pdf(request, submission_id):
     """
     submission = get_object_or_404(Submission, id=submission_id, is_latest=True)
     user = request.user
-    
-    # Перевірка прав
     if (submission.author != user and
         submission.reviewer != user and
         submission.conference.organizer != user and

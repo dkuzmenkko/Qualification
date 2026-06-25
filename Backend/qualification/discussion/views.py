@@ -36,8 +36,6 @@ class CommentListCreateView(generics.ListCreateAPIView):
             parent__isnull=True,
             is_deleted=False
         ).select_related('author').prefetch_related('replies')
-        
-        # Сортування за рейтингом
         sort_by = self.request.query_params.get('sort', 'rating')
         
         if sort_by == 'rating':

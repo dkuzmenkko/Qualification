@@ -82,8 +82,6 @@ class ConferenceSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError({
                 'online_link': "Для онлайн або гібридної конференції обов'язково вкажіть посилання"
             })
-        
-        # Валідація для офлайн конференцій
         if conference_type in ['OFFLINE', 'HYBRID']:
             address = data.get('address')
             if not address:

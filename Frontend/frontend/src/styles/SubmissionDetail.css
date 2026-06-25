@@ -1,4 +1,4 @@
-/* SubmissionDetail.css - Minimalist Design with Black Text */
+ 
 
 .submissionDetailContainer {
   max-width: 900px;
@@ -7,7 +7,7 @@
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-/* Back Link */
+ 
 .submissionDetailBackLink {
   margin-bottom: 1.5rem;
 }
@@ -25,7 +25,7 @@
   text-decoration: underline;
 }
 
-/* Header */
+ 
 .submissionDetailContainer > h1 {
   font-size: 1.5rem;
   font-weight: 700;
@@ -35,7 +35,7 @@
   border-bottom: 2px solid #e2e8f0;
 }
 
-/* Info Grid */
+ 
 .submissionDetailInfo {
   margin-bottom: 1.5rem;
   display: grid;
@@ -67,7 +67,7 @@
   text-decoration: underline;
 }
 
-/* Status Badge */
+ 
 .submissionDetailStatus {
   display: inline-block;
   padding: 0.125rem 0.5rem;
@@ -102,7 +102,7 @@
   color: #7f1d1d;
 }
 
-/* Abstract Section */
+ 
 .submissionDetailAbstract {
   margin: 1.5rem 0;
 }
@@ -126,7 +126,7 @@
   margin: 0;
 }
 
-/* File Section */
+ 
 .submissionDetailFile {
   margin: 1.5rem 0;
 }
@@ -152,7 +152,7 @@
   text-decoration: underline;
 }
 
-/* Reviewer Comment */
+ 
 .submissionDetailReviewerComment {
   background: #fffbeb;
   padding: 0.75rem 1rem;
@@ -176,7 +176,7 @@
   color: #1e293b;
 }
 
-/* Actions - simple button row */
+ 
 .submissionDetailActions {
   display: flex;
   gap: 0.5rem;
@@ -247,7 +247,7 @@
   cursor: not-allowed;
 }
 
-/* Review Section */
+ 
 .submissionDetailReviewSection {
   margin: 1.5rem 0;
   padding: 1rem;
@@ -311,7 +311,7 @@
   cursor: not-allowed;
 }
 
-/* Versions Section */
+ 
 .submissionDetailVersions {
   margin: 1.5rem 0;
 }
@@ -370,7 +370,7 @@
   text-decoration: underline;
 }
 
-/* Discussion Section */
+ 
 .submissionDetailDiscussion {
   margin: 1.5rem 0;
   padding-top: 1rem;
@@ -386,7 +386,7 @@
   letter-spacing: 0.5px;
 }
 
-/* Add Comment */
+ 
 .submissionDetailAddComment {
   margin-bottom: 1.5rem;
 }
@@ -461,7 +461,7 @@
   cursor: not-allowed;
 }
 
-/* Comments List */
+ 
 .submissionDetailComment {
   padding: 0.75rem 0;
   border-bottom: 1px solid #f1f5f9;
@@ -549,7 +549,7 @@
   color: #2563eb;
 }
 
-/* Reply Comment */
+ 
 .submissionDetailCommentReply {
   margin-left: 1.5rem;
   margin-top: 0.75rem;
@@ -557,7 +557,7 @@
   border-left: 2px solid #e2e8f0;
 }
 
-/* No Comments */
+ 
 .submissionDetailDiscussion > p {
   font-size: 0.75rem;
   color: #64748b;
@@ -565,7 +565,7 @@
   padding: 1rem;
 }
 
-/* Responsive */
+ 
 @media (max-width: 768px) {
   .submissionDetailContainer {
     padding: 0 1rem;

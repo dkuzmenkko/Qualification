@@ -1,4 +1,3 @@
-# generate_vapid.py
 from cryptography.hazmat.primitives.asymmetric import ec
 from cryptography.hazmat.primitives import serialization
 

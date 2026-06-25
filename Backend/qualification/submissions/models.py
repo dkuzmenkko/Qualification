@@ -1,4 +1,3 @@
-# submissions/models.py
 
 import os
 from django.db import models
@@ -9,7 +8,6 @@ from conferences.models import Conference
 
 def submission_file_path(instance, filename):
     """Генерує шлях для збереження файлу тези"""
-    # Формат: submissions/{conference_id}/{author_id}/{filename}
     return f'submissions/{instance.conference.conference_id}/{instance.author.id}/{filename}'
 
 
@@ -123,16 +121,11 @@ class Submission(models.Model):
         """Перевіряє, чи може користувач переглядати тезу"""
         if not user.is_authenticated:
             return False
-        
-        # Архівні тези мають обмежений доступ
         if self.is_archived:
-            # Тільки автор, рецензент, організатор або адмін можуть бачити архів
             return (user == self.author or 
                     user == self.reviewer or 
                     user == self.conference.organizer or 
                     user.role == 'ADMIN')
-        
-        # Звичайні тези - доступ для всіх авторизованих
         if user == self.author:
             return True
         if user == self.reviewer:
@@ -189,7 +182,6 @@ class Submission(models.Model):
         ).first()
     
     def get_file_url(self):
-        """Повертає URL файлу або None"""
         if self.file:
             return self.file.url
         return None
@@ -239,7 +231,6 @@ class VersionHistory(models.Model):
 
 
 class SubmissionView(models.Model):
-    """Модель для відстеження унікальних переглядів тез"""
     
     submission = models.ForeignKey(
         Submission,

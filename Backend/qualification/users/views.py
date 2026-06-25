@@ -33,21 +33,17 @@ def send_verification_code(request):
     if serializer.is_valid():
         email = serializer.validated_data['email']
         print(f"Valid email: {email}")
-        
-        # Показуємо всіх користувачів з цим email
         all_users = User.objects.filter(email=email)
         print(f"All users with this email: {all_users.count()}")
         for u in all_users:
             print(f"  - User {u.id}: username={u.username}, verified={u.email_verified}")
         
         try:
-            # Шукаємо існуючого непідтвердженого користувача
             user = User.objects.filter(email=email, email_verified=False).first()
             print(f"Existing unverified user: {user}")
             
             if not user:
                 print(f"Creating temporary user for {email}")
-                # Створюємо тимчасового користувача
                 temp_username = email.split('@')[0] + '_' + str(int(timezone.now().timestamp()))[-6:]
                 print(f"Temporary username: {temp_username}")
                 
@@ -61,12 +57,8 @@ def send_verification_code(request):
                 print(f"Temporary user created: ID={user.id}, username={user.username}")
             else:
                 print(f"Using existing unverified user: ID={user.id}, username={user.username}")
-            
-            # Генеруємо новий код
             code = user.generate_verification_code()
             print(f"Generated verification code: {code}")
-            
-            # Відправляємо email
             try:
                 send_verification_email(email, code)
                 print(f"Email sent to {email}")
@@ -106,23 +98,17 @@ def verify_code(request):
     if serializer.is_valid():
         user = serializer.validated_data['user']
         print(f"User found: ID={user.id}, username={user.username}, verified={user.email_verified}")
-        
-        # Перевіряємо чи email ще не підтверджено
         if user.email_verified:
             print("User already verified!")
             return Response(
                 {"error": "Email вже підтверджено"},
                 status=400
             )
-        
-        # Позначаємо email як підтверджений
         user.email_verified = True
         user.email_verification_code = None
         user.email_verification_created_at = None
         user.save(update_fields=['email_verified', 'email_verification_code', 'email_verification_created_at'])
         print(f"User marked as verified: {user.email_verified}")
-        
-        # Генеруємо унікальне ім'я користувача
         base_username = user.email.split('@')[0]
         username = base_username
         counter = 1
@@ -155,8 +141,6 @@ def register_api(request):
     if serializer.is_valid():
         email = serializer.validated_data['email']
         print(f"Validated email: {email}")
-        
-        # Шукаємо існуючого користувача
         try:
             user = User.objects.get(email=email)
             print(f"Found user: {user.id}, username: {user.username}, email_verified: {user.email_verified}")
@@ -172,8 +156,6 @@ def register_api(request):
                 {"error": "Email не знайдено. Спочатку підтвердіть email."},
                 status=400
             )
-        
-        # Перевіряємо, чи не зайнятий username
         new_username = serializer.validated_data['username']
         print(f"New username: {new_username}")
         
@@ -182,12 +164,8 @@ def register_api(request):
                 {"error": f"Користувач з ім'ям '{new_username}' вже існує"},
                 status=400
             )
-        
-        # Зберігаємо старі значення для порівняння
         old_username = user.username
         print(f"Old username: {old_username}")
-        
-        # ОНОВЛЮЄМО існуючого користувача
         user.first_name = serializer.validated_data.get('first_name', user.first_name)
         user.last_name = serializer.validated_data.get('last_name', user.last_name)
         user.middle_name = serializer.validated_data.get('middle_name', user.middle_name)
@@ -195,12 +173,8 @@ def register_api(request):
         user.orcid_id = serializer.validated_data.get('orcid_id', user.orcid_id)
         user.affiliation = serializer.validated_data.get('affiliation', user.affiliation)
         user.interests = serializer.validated_data.get('interests', user.interests)
-        
-        # Оновлюємо username та пароль
         user.username = new_username
         user.set_password(serializer.validated_data['password'])
-        
-        # Встановлюємо статус підтвердження для рецензента
         if user.role == 'REVIEWER':
             user.is_approved = False
         else:
@@ -215,8 +189,6 @@ def register_api(request):
                 {"error": f"Помилка збереження: {str(e)}"},
                 status=500
             )
-        
-        # Створюємо токени
         refresh = RefreshToken.for_user(user)
         return Response({
             "message": "Реєстрація успішна",
@@ -245,8 +217,6 @@ def login_api(request):
  
     if user is None:
         return Response({"error": "Невірне ім'я користувача або пароль"}, status=400)
-
-    # Для суперюзера пропускаємо всі перевірки
     if user.is_superuser:
         if user.role != 'ADMIN':
             user.role = 'ADMIN'
@@ -399,7 +369,6 @@ def get_categories(request):
 @permission_classes([IsAuthenticated])
 def delete_user(request, user_id):
     """Видалення користувача (тільки для адміністратора)"""
-    # Перевіряємо права доступу
     if request.user.role != 'ADMIN' and not request.user.is_superuser:
         return Response(
             {"error": "Тільки адміністратор може видаляти користувачів"}, 
@@ -413,15 +382,11 @@ def delete_user(request, user_id):
             {"error": "Користувача не знайдено"}, 
             status=404
         )
-    
-    # Не дозволяємо видалити самого себе
     if user.id == request.user.id:
         return Response(
             {"error": "Ви не можете видалити власний акаунт"}, 
             status=400
         )
-    
-    # Забороняємо видаляти інших адміністраторів (опціонально)
     if user.role == 'ADMIN' or user.is_superuser:
         return Response(
             {"error": "Не можна видаляти інших адміністраторів"}, 
@@ -459,7 +424,6 @@ def delete_avatar(request):
     user = request.user
     
     if user.avatar:
-        # Видаляємо файл аватара
         user.avatar.delete(save=False)
         user.avatar = None
         user.save(update_fields=['avatar'])
@@ -485,18 +449,10 @@ def update_profile(request):
     print(f"Content-Type: {request.content_type}")
     print(f"FILES keys: {request.FILES.keys() if request.FILES else 'No files'}")
     print(f"POST keys: {request.POST.keys() if request.POST else 'No POST data'}")
-    
-    # Для PATCH запитів з файлами потрібна спеціальна обробка
     if request.method == 'PATCH' and request.FILES:
-        # ВАЖЛИВО: Використовуємо request.POST для даних і request.FILES для файлів
-        # Створюємо новий dict з даних POST
         data = {}
-        
-        # Копіюємо всі POST дані
         for key, value in request.POST.items():
             data[key] = value
-        
-        # Додаємо файли
         for key, file in request.FILES.items():
             data[key] = file
         

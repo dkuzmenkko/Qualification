@@ -1,5 +1,3 @@
-// src/pages/Conferences.jsx
-
 import { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import api from '../services/api';
@@ -14,7 +12,7 @@ const Conferences = () => {
     category: '',
     search: '',
     status: '',
-    conference_type: '', // Додано фільтр за типом проведення
+    conference_type: '',
   });
   const [categories, setCategories] = useState([]);
 
@@ -58,7 +56,6 @@ const Conferences = () => {
           data = data.filter(c => c.event_date < today);
         }
         
-        // Фільтрація за типом проведення
         if (filters.conference_type) {
           data = data.filter(c => c.conference_type === filters.conference_type);
         }
@@ -91,7 +88,6 @@ const Conferences = () => {
     navigate('/conferences');
   };
 
-  // Функція для отримання іконки та стилю типу конференції
   const getConferenceTypeIcon = (type) => {
     switch(type) {
       case 'ONLINE':

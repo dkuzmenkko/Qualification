@@ -82,8 +82,6 @@ class PublicProfileSerializer(serializers.Serializer):
     def to_representation(self, instance):
         user = instance['user']
         profile = instance['profile']
-        
-        # Отримуємо контекст запиту
         request = self.context.get('request')
         
         data = {

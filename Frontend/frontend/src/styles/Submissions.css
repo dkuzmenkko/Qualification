@@ -1,4 +1,4 @@
-/* Submissions.css - Modern High Contrast White & Blue Theme with Filters */
+ 
 
 .submissionsContainer {
   max-width: 1200px;
@@ -6,7 +6,7 @@
   padding: 0 1.5rem;
 }
 
-/* Header Section */
+ 
 .submissionsHeader {
   display: flex;
   justify-content: space-between;
@@ -26,7 +26,7 @@
   margin: 0;
 }
 
-/* Filter Section */
+ 
 .submissionsFilterSection {
   background: #f8fafc;
   border-radius: 1rem;
@@ -105,7 +105,7 @@
   cursor: pointer;
 }
 
-/* Create Select Dropdown */
+ 
 .submissionsCreateSelect {
   padding: 0.75rem 2rem 0.75rem 1rem;
   border: 2px solid #cbd5e1;
@@ -132,7 +132,7 @@
   color: #1e293b;
 }
 
-/* Active Filter Banner */
+ 
 .submissionsActiveFilter {
   background: #dbeafe;
   padding: 0.75rem 1rem;
@@ -169,7 +169,7 @@
   box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
 }
 
-/* Empty State */
+ 
 .submissionsEmpty {
   text-align: center;
   padding: 4rem 2rem;
@@ -207,7 +207,7 @@
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 
-/* Cards List */
+ 
 .submissionsCard {
   margin-bottom: 1rem;
   animation: fadeInUp 0.3s ease-out;
@@ -248,7 +248,7 @@
   text-decoration: underline;
 }
 
-/* Fix for author row - Avatar and name alignment */
+ 
 .submissionsCardInfo p {
   margin: 0.5rem 0;
   font-size: 0.875rem;
@@ -262,7 +262,7 @@
   border-radius: 0.5rem;
 }
 
-/* Special styling for author row to fix avatar alignment */
+ 
 .submissionsAuthorRow {
   display: flex;
   align-items: center;
@@ -312,7 +312,7 @@
   text-decoration: underline;
 }
 
-/* Status Badge */
+ 
 .submissionsStatusBadge {
   display: inline-block;
   padding: 0.25rem 0.75rem;
@@ -322,7 +322,7 @@
   margin-left: 0.5rem;
 }
 
-/* Card Actions */
+ 
 .submissionsCardActions {
   display: flex;
   gap: 0.75rem;
@@ -384,7 +384,7 @@
   box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
 }
 
-/* Loading State */
+ 
 .submissionsContainer > div:first-of-type:not(.submissionsHeader) {
   text-align: center;
   padding: 3rem;
@@ -393,13 +393,13 @@
   font-weight: 500;
 }
 
-/* Focus States */
+ 
 *:focus-visible {
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
 }
 
-/* Animation */
+ 
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -411,7 +411,7 @@
   }
 }
 
-/* Responsive Design */
+ 
 @media (max-width: 768px) {
   .submissionsContainer {
     padding: 0 1rem;
@@ -472,7 +472,7 @@
   }
 }
 
-/* Status Color Variations */
+ 
 .submissionsStatusBadge[style*="#4caf50"] {
   background: #d1fae5 !important;
   color: #065f46 !important;

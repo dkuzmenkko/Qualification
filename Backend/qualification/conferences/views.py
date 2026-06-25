@@ -1,6 +1,5 @@
-# conferences/views.py
 
-from django.http import FileResponse, Http404  # Http404 правильно імпортовано
+from django.http import FileResponse, Http404 
 from rest_framework import generics, permissions, status
 from django.shortcuts import get_object_or_404
 from submissions.models import Submission
@@ -9,7 +8,7 @@ from rest_framework.exceptions import PermissionDenied
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from users.models import User
-from rest_framework.permissions import IsAuthenticated, AllowAny  # Тільки ці два
+from rest_framework.permissions import IsAuthenticated, AllowAny 
 from .models import Announcement, Conference, ReviewerInvitation
 from rest_framework.decorators import api_view, permission_classes
 from recommendations.services import UserActivityTracker
@@ -229,7 +228,6 @@ def my_invitations(request):
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def conference_submissions(request, pk):
-    """Отримати всі тези конференції для організатора"""
     try:
         conference = Conference.objects.get(pk=pk)
     except Conference.DoesNotExist:
@@ -270,8 +268,6 @@ def download_guidelines(request, conference_id):
     
     if not conference.guidelines_file:
         raise Http404("Файл інструкції не знайдено")
-    
-    # Повертаємо файл через FileResponse
     return FileResponse(
         conference.guidelines_file.open('rb'),
         content_type='application/pdf',
@@ -281,7 +277,6 @@ def download_guidelines(request, conference_id):
 @api_view(['DELETE'])
 @permission_classes([IsAuthenticated])
 def delete_conference(request, conference_id):
-    """Видалення конференції (тільки для адміністратора)"""
     if request.user.role != 'ADMIN' and not request.user.is_superuser:
         return Response(
             {"error": "Тільки адміністратор може видаляти конференції"}, 
@@ -313,13 +308,10 @@ from django.conf import settings
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def conference_announcements(request, conference_id):
-    """Отримати всі оголошення конференції"""
     try:
         conference = Conference.objects.get(id=conference_id)
     except Conference.DoesNotExist:
         return Response({"error": "Конференцію не знайдено"}, status=404)
-    
-    # Тільки організатор або адмін можуть бачити оголошення
     if conference.organizer != request.user and request.user.role != 'ADMIN':
         return Response({"error": "Тільки організатор може переглядати оголошення"}, status=403)
     
@@ -331,13 +323,10 @@ def conference_announcements(request, conference_id):
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def create_announcement(request, conference_id):
-    """Створити нове оголошення та відправити його учасникам"""
     try:
         conference = Conference.objects.get(id=conference_id)
     except Conference.DoesNotExist:
         return Response({"error": "Конференцію не знайдено"}, status=404)
-    
-    # Тільки організатор може створювати оголошення
     if conference.organizer != request.user and request.user.role != 'ADMIN':
         return Response({"error": "Тільки організатор може створювати оголошення"}, status=403)
     
@@ -346,23 +335,17 @@ def create_announcement(request, conference_id):
         return Response(serializer.errors, status=400)
     
     with transaction.atomic():
-        # Створюємо оголошення
         announcement = serializer.save(
             conference=conference,
             created_by=request.user
         )
-        
-        # Отримуємо отримувачів
         recipients = announcement.get_recipients()
         announcement.sent_to_count = len(recipients)
         announcement.sent_at = timezone.now()
         announcement.save(update_fields=['sent_to_count', 'sent_at'])
-        
-        # Відправляємо сповіщення кожному учаснику
         from notifications.utils import create_notification
         
         for recipient in recipients:
-            # Внутрішнє сповіщення
             create_notification(
                 recipient,
                 f"Нове оголошення на конференції '{conference.title}': {announcement.title}\n\n{announcement.content[:200]}",

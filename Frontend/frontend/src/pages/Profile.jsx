@@ -18,7 +18,6 @@ const Profile = () => {
   const [avatarTimestamp, setAvatarTimestamp] = useState(Date.now());
   const [errorShown, setErrorShown] = useState(false);
   
-  // Ref для запобігання повторним викликам
   const isInitialLoadRef = useRef(false);
 
   const fetchProfile = useCallback(async () => {
@@ -31,13 +30,11 @@ const Profile = () => {
       setProfile(profileRes.data);
       setStats(statsRes.data);
       setViews(viewsRes.data);
-      setErrorShown(false); // Скидаємо помилку при успішному завантаженні
+      setErrorShown(false); 
     } catch (error) {
       console.error('Error fetching profile:', error);
-      // Показуємо помилку тільки один раз
       if (!errorShown) {
         setErrorShown(true);
-        // Не показуємо помилку якщо це просто відсутність даних
         if (error.response?.status !== 404) {
           showError('Помилка завантаження профілю');
         }
@@ -47,7 +44,6 @@ const Profile = () => {
     }
   }, [user.id, showError, errorShown]);
 
-  // Тільки один useEffect для початкового завантаження
   useEffect(() => {
     if (!isInitialLoadRef.current && user?.id) {
       isInitialLoadRef.current = true;
@@ -55,7 +51,6 @@ const Profile = () => {
     }
   }, [fetchProfile, user?.id]);
 
-  // Оновлюємо timestamp при зміні avatar_url
   useEffect(() => {
     setAvatarError(false);
     setAvatarTimestamp(Date.now());
@@ -64,7 +59,6 @@ const Profile = () => {
   const getAvatarUrl = () => {
     if (avatarError) return defaultAvatar;
     if (user?.avatar_url) {
-      // Додаємо timestamp для обходу кешу
       const separator = user.avatar_url.includes('?') ? '&' : '?';
       return `${user.avatar_url}${separator}t=${avatarTimestamp}`;
     }
@@ -111,7 +105,6 @@ const Profile = () => {
 
   setUploading(true);
   try {
-    // Переконайтеся, що URL правильний
     const response = await api.delete('/users/me/avatar/delete/');
     
     if (response.data.user) {

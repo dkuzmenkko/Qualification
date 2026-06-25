@@ -1,6 +1,6 @@
-/* ProfileEdit.css - Сучасний дизайн редагування профілю */
+ 
 
-/* Container */
+ 
 .profileEditContainer {
   max-width: 800px;
   margin: 0 auto;
@@ -21,7 +21,7 @@
   }
 }
 
-/* Title */
+ 
 .profileEditTitle {
   font-size: 2rem;
   font-weight: 700;
@@ -32,7 +32,7 @@
   display: inline-block;
 }
 
-/* Section Titles */
+ 
 .profileEditSectionTitle {
   font-size: 1.25rem;
   font-weight: 700;
@@ -47,7 +47,7 @@
   margin-top: 0;
 }
 
-/* Avatar Section */
+ 
 .profileEditAvatarSection {
   background: #f9fafb;
   border-radius: 1rem;
@@ -73,7 +73,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Avatar Buttons */
+ 
 .profileEditAvatarButtons {
   display: flex;
   gap: 1rem;
@@ -84,7 +84,7 @@
 }
 
 .profileEditButton {
-  padding: 5px 10px; /* менші */
+  padding: 5px 10px;  
   border-radius: 8px;
   font-size: 12px;
   font-weight: 500;
@@ -132,7 +132,7 @@
   
 }
 
-/* Progress Bar */
+ 
 .profileEditProgress {
   display: flex;
   align-items: center;
@@ -165,7 +165,7 @@
   font-weight: 600;
 }
 
-/* Form Fields */
+ 
 .profileEditField {
   margin-bottom: 1.25rem;
   display: flex;
@@ -202,7 +202,7 @@
   min-height: 100px;
 }
 
-/* Interests Section */
+ 
 .profileEditInterests {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -234,7 +234,7 @@
   accent-color: #667eea;
 }
 
-/* Checkboxes */
+ 
 .profileEditCheckbox {
   margin-bottom: 1rem;
   display: flex;
@@ -257,7 +257,7 @@
   accent-color: #667eea;
 }
 
-/* Submit Button */
+ 
 .profileEditSubmit {
   width: 100%;
   padding: 0.875rem;
@@ -320,7 +320,7 @@
 
 
 
-/* Print Styles */
+ 
 @media print {
   .profileEditSubmit,
   .profileEditAvatarButtons {

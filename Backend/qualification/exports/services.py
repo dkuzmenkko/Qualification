@@ -20,16 +20,14 @@ class ExcelExporter:
     
     @staticmethod
     def safe_str(value):
-        """Безпечне перетворення в рядок"""
+
         if value is None:
             return ""
         return str(value)
     
     @staticmethod
     def export_participants(conference, submissions):
-        """
-        Експорт учасників конференції у форматі Excel
-        """
+   
         wb = openpyxl.Workbook()
         ws = wb.active
         ws.title = "Учасники конференції"
@@ -56,8 +54,6 @@ class ExcelExporter:
             cell.fill = header_fill
             cell.alignment = header_alignment
             cell.border = border
-        
-        # Збираємо унікальних учасників
         participants = {}
         
         for submission in submissions:
@@ -70,15 +66,12 @@ class ExcelExporter:
                 }
             
             participants[author.id]['submissions'].append(submission)
-        
-        # Заповнюємо дані
         row = 2
         for author_id, data in participants.items():
             author = data['user']
             user_submissions = data['submissions']
             
             for idx, submission in enumerate(user_submissions):
-                # Визначаємо роль
                 if submission.author == conference.organizer:
                     role = "Організатор"
                 elif submission.reviewer:
@@ -112,12 +105,8 @@ class ExcelExporter:
                 ws.cell(row=row, column=9, value=ExcelExporter.safe_str(submission.reviewer_comment or "")).border = border
                 
                 row += 1
-        
-        # Якщо немає жодного учасника
         if row == 2:
             ws.cell(row=2, column=1, value="Немає учасників").border = border
-        
-        # Автоматичне налаштування ширини колонок
         for col in range(1, len(headers) + 1):
             column_letter = get_column_letter(col)
             max_length = 0
@@ -127,8 +116,6 @@ class ExcelExporter:
                     max_length = max(max_length, len(str(cell_value)))
             adjusted_width = min(max_length + 2, 50)
             ws.column_dimensions[column_letter].width = adjusted_width
-        
-        # Додаємо інформацію внизу
         info_row = ws.max_row + 2
         ws.cell(row=info_row, column=1, value=f"Конференція: {ExcelExporter.safe_str(conference.title)}")
         ws.cell(row=info_row + 1, column=1, value=f"ID конференції: {ExcelExporter.safe_str(conference.conference_id)}")
@@ -144,9 +131,7 @@ class ExcelExporter:
     
     @staticmethod
     def export_submissions_list(conference, submissions):
-        """
-        Експорт списку тез конференції у форматі Excel
-        """
+ 
         wb = openpyxl.Workbook()
         ws = wb.active
         ws.title = "Тези конференції"
@@ -204,12 +189,8 @@ class ExcelExporter:
             
             ws.cell(row=row, column=9, value=ExcelExporter.safe_str(submission.reviewer_comment or "")).border = border
             ws.cell(row=row, column=10, value=submission.version).border = border
-        
-        # Якщо немає тез
         if submissions.count() == 0:
             ws.cell(row=2, column=1, value="Немає поданих тез").border = border
-        
-        # Автоматичне налаштування ширини колонок
         for col in range(1, len(headers) + 1):
             column_letter = get_column_letter(col)
             max_length = 0
@@ -219,8 +200,6 @@ class ExcelExporter:
                     max_length = max(max_length, len(str(cell_value)))
             adjusted_width = min(max_length + 2, 50)
             ws.column_dimensions[column_letter].width = adjusted_width
-        
-        # Додаємо інформацію внизу
         info_row = ws.max_row + 2
         ws.cell(row=info_row, column=1, value=f"Конференція: {ExcelExporter.safe_str(conference.title)}")
         ws.cell(row=info_row + 1, column=1, value=f"ID конференції: {ExcelExporter.safe_str(conference.conference_id)}")

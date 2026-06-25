@@ -1,5 +1,3 @@
-// src/pages/UsersList.js
-
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import api from '../services/api';
@@ -40,17 +38,14 @@ const UsersList = () => {
         if (filters.role) params.append('role', filters.role);
         if (filters.search) params.append('search', filters.search);
         
-        // Тільки адміністратор може фільтрувати за is_approved
         if (filters.pending && user?.role === 'ADMIN') {
           params.append('is_approved', 'false');
         }
         
         const response = await api.get(`/users/list/?${params.toString()}`);
         
-        // Фільтруємо результати для звичайних користувачів
         let data = response.data;
         if (user?.role !== 'ADMIN') {
-          // Звичайні користувачі бачать тільки підтверджених рецензентів та авторів
           data = data.filter(u => 
             (u.role === 'AUTHOR') || 
             (u.role === 'REVIEWER' && u.is_approved === true)

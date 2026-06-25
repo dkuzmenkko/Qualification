@@ -107,7 +107,6 @@ class User(AbstractUser):
     )
     
     def generate_verification_code(self):
-        """Генерує 6-значний код верифікації"""
         code = ''.join(secrets.choice(string.digits) for _ in range(6))
         self.email_verification_code = code
         self.email_verification_created_at = timezone.now()
@@ -115,14 +114,12 @@ class User(AbstractUser):
         return code
     
     def is_verification_code_valid(self, code):
-        """Перевіряє чи дійсний код верифікації (5 хвилин)"""
         if not self.email_verification_code or not self.email_verification_created_at:
             return False
         
         if self.email_verification_code != code:
             return False
         
-        # Код дійсний 5 хвилин
         expiration = self.email_verification_created_at + timezone.timedelta(minutes=5)
         return timezone.now() <= expiration
     
